@@ -1,0 +1,47 @@
+header h1{
+    display: center ; 
+    text-align: center ;
+    font-size: 55pt;
+    color:rgb(253, 209, 13);
+    font-family: 'Verana'; 
+}
+
+#container{
+    background-color: rgb(248, 201, 209);
+}
+
+#home{
+    border: rgb(189, 56, 118)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 50px ;
+    display: inline; 
+    justify-content: flex-end; 
+    box-shadow: 0 4px 8px rgb(41, 39, 39) ;
+}
+
+
+#integrantes{
+    font-size: 25pt;
+    font-family: 'Verdana';
+    color: rgb(201, 70, 120); 
+}
+
+a, a:link{
+    text-decoration: none; 
+    color: rgb(250, 206, 12); 
+    font-family: 'Verdana';
+}
+
+a:hover{
+    text-decoration: underline;
+    color:aliceblue; 
+    font-family: 'Verdana';
+    text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
+                0  0 5px rgb(197, 162, 3) ,
+                0  0  15px rgb(240, 205, 7), 
+                0  0  25px rgb(253, 249, 7) ;
+    text-decoration: none; 
+}
+
