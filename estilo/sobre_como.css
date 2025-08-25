@@ -1,10 +1,30 @@
-header h1{
-    display: center ; 
-    text-align: center ;
-    font-size: 55pt;
-    color:rgb(253, 209, 13);
-    font-family: 'Verana'; 
+#tituloSobre{
+    display: center; 
+    text-align: center;
+    width: 22em;
+    height: 8em;
+    display: inline;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    margin-top: 3%;
+    margin-left: 31%;
+    margin-bottom: 1.2%;
 }
+
+#tituloEquipe{
+    display: center; 
+    text-align: center;
+    width: 20em;
+    height: 10em;
+    display: inline;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    margin-top: 3%;
+    margin-left: 1.2%;
+}
+
 
 #container{
     background-color: rgb(248, 201, 209);
@@ -44,4 +64,12 @@ a:hover{
                 0  0  25px rgb(253, 249, 7) ;
     text-decoration: none; 
 }
+
+#box{
+    border: 2% solid rgb(247, 210, 227);
+    background: transparent ;
+    padding: 4%;
+    margin: 2%; 
+}
+
 
