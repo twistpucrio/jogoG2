@@ -1,0 +1,75 @@
+#titulo{
+    display: center; 
+    text-align: center;
+    width: 45em;
+    height: 20em;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    margin-top: 5%; 
+}
+
+body{
+    background-color: rgb(248, 201, 209);
+}
+
+nav{
+    margin:0 auto; 
+}
+
+.niveis{
+    border: rgb(240, 166, 201)  2px solid ;  
+    border-radius: 10px;
+    background-color: rgb(172, 10, 77) ;
+    font-size: 40pt;
+    text-align: center;
+    display: block;
+    margin: 1em auto; 
+    width: 25% ;
+    box-shadow: 0 4px 8px rgb(41, 39, 39) ;
+}
+
+#sobre{
+    border: rgb(189, 56, 118)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 50px ;
+    display: inline; 
+    justify-content: flex-end; 
+
+    box-shadow: 0 4px 8px rgb(41, 39, 39) ;
+     
+}
+
+#como{
+    border: rgb(189, 56, 118)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 100px ;
+    display: inline; 
+    box-shadow: 0 4px 8px rgb(41, 39, 39) ;
+    padding: 0.5rem;
+    margin-right: 0.5%;
+    margin-left: 80%;
+}
+
+a, a:link{
+    text-decoration: none; 
+    color: rgb(250, 206, 12); 
+    font-family: 'Verdana';
+}
+
+a:hover{
+    text-decoration: underline;
+    color:aliceblue; 
+    font-family: 'Verdana';
+    text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
+                0  0 5px rgb(197, 162, 3) ,
+                0  0  15px rgb(240, 205, 7), 
+                0  0  25px rgb(253, 249, 7) ;
+    text-decoration: none; 
+}
+
