@@ -1,4 +1,53 @@
+@font-face {
+    font-family: game;
+    src: url(../font/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+
+body{
+    display: flex;
+    background-image: url("../img/background_deitado.jpg");
+    background-repeat: no-repeat;
+}
+
 #timer{
-    border-radius: 2em;
     font-size: 2em; 
+    background-color: rgb(180, 215, 248);
+    padding: 0.01em;
+    width: 6em;
+    height: 3em;
+    border-radius: 0.1em;
+    align-items: center;
+    text-align: center;
+    font-family: "game";
+    font-size: 1.5em;
+    color: rgb(123, 154, 219);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.score{
+    font-size: 2em; 
+    background-color: lightsalmon;
+    padding: 0.5em;
+    width: 6em;
+    height: 3em;
+    border-radius: 0.1em;
+    border: rgb(157, 183, 233);
+    align-items: center;
+    text-align: center;
+    font-family: "game";
+    font-size: 1em;
+    color: rgb(238, 238, 240);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+#back{
+    margin: 0.5em;
+    padding: 0.5em;
+    color: lightcoral;
+    text-decoration: none;
+    background-color: rgb(243, 182, 213);
+    border: rgb(189, 56, 118)  0.1em solid;
+    border-radius: 0.5em;
 }

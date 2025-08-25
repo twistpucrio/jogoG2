@@ -6,9 +6,13 @@ header h1{
     font-family: 'Verana'; 
 }
 
-#container{
-    background-color: rgb(248, 201, 209);
+
+body{
+    background-image: url("../img/background_deitado.jpg");
+    background-repeat: no-repeat;
 }
+
+
 
 #home{
     border: rgb(189, 56, 118)  2px solid ; 
