@@ -53,9 +53,7 @@
   transform: translateY(1em);
 }
 
-body{
-    background-color: rgb(248, 201, 209);
-=======
+
 
 header h1{
     display: center ; 
@@ -132,7 +130,7 @@ a:hover{
     font-family: 'Arial';
     color: rgb(119, 27, 65);
 }
-=======
+
 .tutorial{
     width: 25em;
     margin: 1em;
