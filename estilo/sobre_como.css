@@ -1,3 +1,4 @@
+
 #tituloSobre{
     display: center; 
     text-align: center;
@@ -54,7 +55,23 @@
 
 body{
     background-color: rgb(248, 201, 209);
+=======
+
+header h1{
+    display: center ; 
+    text-align: center ;
+    font-size: 55pt;
+    color:rgb(253, 209, 13);
+    font-family: 'Verana'; 
 }
+
+
+body{
+    background-image: url("../img/background_deitado.jpg");
+    background-repeat: no-repeat;
+}
+
+
 
 #home{
     border: rgb(189, 56, 118)  2px solid ; 
@@ -97,6 +114,7 @@ a:hover{
     text-decoration: none; 
 }
 
+
 #box{
     backdrop-filter: blur (8px);
     box-shadow: 0 0 30px rgba(255,255,255,0.1);
@@ -114,3 +132,16 @@ a:hover{
     font-family: 'Arial';
     color: rgb(119, 27, 65);
 }
+=======
+.tutorial{
+    width: 25em;
+    margin: 1em;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5em;
+    box-shadow:  0 0.1em 8px 0 grey;
+}
+
+
