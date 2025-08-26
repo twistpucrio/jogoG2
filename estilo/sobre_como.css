@@ -15,6 +15,10 @@ body{
 
 
 
+#container{
+    background-color: rgb(248, 201, 209);
+}
+
 #home{
     border: rgb(189, 56, 118)  2px solid ; 
     background-color: rgb(243, 182, 213) ;
