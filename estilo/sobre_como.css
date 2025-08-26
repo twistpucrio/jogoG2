@@ -25,8 +25,34 @@
     margin-left: 1.2%;
 }
 
+#botaoHome{
+    width: 3em; 
+    height: 3em;
+} 
 
-#container{
+.button{
+    cursor: pointer;
+    border:rgb(219, 156, 188)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    border-radius: 100em ;
+    display: inline; 
+    box-shadow: 0 9px #bdbbbb;
+    padding: 1em;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.button:hover{
+    background-color: rgb(243, 182, 213) ;
+}
+
+.button:active {
+  background-color:  rgb(197, 139, 168);
+  box-shadow: 0 5px #666;
+  transform: translateY(1em);
+}
+
+body{
     background-color: rgb(248, 201, 209);
 }
 
@@ -41,11 +67,17 @@
     box-shadow: 0 4px 8px rgb(41, 39, 39) ;
 }
 
-
 #integrantes{
-    font-size: 25pt;
+    font-size: 28pt;
     font-family: 'Verdana';
     color: rgb(201, 70, 120); 
+}
+
+.integrantes{
+    font-size: 18pt;
+    text-align: justify ;
+    font-family: 'Arial';
+    color: rgb(119, 27, 65);
 }
 
 a, a:link{
@@ -66,10 +98,19 @@ a:hover{
 }
 
 #box{
-    border: 2% solid rgb(247, 210, 227);
-    background: transparent ;
-    padding: 4%;
-    margin: 2%; 
+    backdrop-filter: blur (8px);
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.2) ;
+    margin-top: 4em;
+    padding: 2em; 
+    margin-left: 2em ;
+    margin-right: 2em ;
+    border-radius: 50px;
 }
 
-
+#explicacao{
+    font-size: 18pt;
+    text-align: justify ;
+    font-family: 'Arial';
+    color: rgb(119, 27, 65);
+}
