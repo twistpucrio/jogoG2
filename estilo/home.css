@@ -71,8 +71,10 @@
 
 
 body{
-    background-color: rgb(248, 201, 209);
+    background-image: url("../img/background_deitado.png");
+    background-repeat: repeat;
 }
+
 
 nav{
     margin:0 auto; 

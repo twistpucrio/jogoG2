@@ -122,6 +122,9 @@ function matchAnimal(){
     matchTres();
 }
 
+const scoreElement = document.querySelector(".score");
+let score= 0; 
+
 function matchCinco(){
     //verifica linhas
     for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
@@ -137,7 +140,8 @@ function matchCinco(){
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
                 animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score+=25; //pontuacao; 
+                scoreElement.innerText = `Score: ${score}`;
             }
         }
     
@@ -156,7 +160,8 @@ function matchCinco(){
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
                 animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+               score+=25; //pontuacao 
+               scoreElement.innerText = `Score: ${score}`;
             } 
         }
     }
@@ -179,7 +184,8 @@ function matchQuatro(){
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score+=20; //pontuacao 
+                scoreElement.innerText = `Score: ${score}`;
             }
         }
     
@@ -196,7 +202,8 @@ function matchQuatro(){
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score+=20; //pontuacao
+                scoreElement.innerText = `Score: ${score}`;
             } 
         }
     }
@@ -216,7 +223,8 @@ function matchTres(){
                 animal1.src = "./img/Vazio.png"
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score+=15; //pontuacao
+                scoreElement.innerText = `Score: ${score}`;
             }
         }
     
@@ -231,7 +239,8 @@ function matchTres(){
                 animal1.src = "./img/Vazio.png"
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score+=15; //pontuacao
+                scoreElement.innerText = `Score: ${score}`;
             } 
         }
     }
