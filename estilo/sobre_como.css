@@ -49,3 +49,10 @@ a:hover{
     text-decoration: none; 
 }
 
+.tutorial{
+    width: 25em;
+    margin: 2em;
+    box-shadow: 0 0.5em 0.5em 0 grey;
+    border-radius: 3em;
+    display: inline-block;
+}
