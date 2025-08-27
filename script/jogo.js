@@ -6,18 +6,32 @@ var colunas = 9;
 var quadradoAtual;
 var quadradoOutro;
 
-let controle = 0; 
+let controle = 0;
 
+let scoreElement = document.getElementById("score");
+scoreElement.innerHTML = 0;
+let score= 0; 
 
 
 window.addEventListener('load', function() {
     comecarJogo();
     window.setInterval(function(){
-        matchAnimal();
         deslizarAnimais();
         gerarAnimais();
+        matchAnimal(); 
     },100);
+    controle = 1; 
 });
+
+
+if (controle === 1){
+    
+}
+
+function contabiliza (pontos){
+    score += pontos; 
+    scoreElement.innerHTML = `${score}`;
+}
 
 function animalAleatorio(){
     return animais[Math.floor(Math.random() * animais.length)];
@@ -125,9 +139,7 @@ function matchAnimal(){
     matchTres();
 }
 
-let scoreElement = document.getElementById("score");
-scoreElement.innerHTML = 0;
-let score= 0; 
+
 
 function matchCinco(){
     //verifica linhas
@@ -144,8 +156,7 @@ function matchCinco(){
                 animal3.src = "./img/Vazio.png";
                 animal4.src = "./img/Vazio.png";
                 animal5.src = "./img/Vazio.png";
-                score += 25; //pontuacao; 
-                scoreElement.innerHTML = `${score}`;
+                contabiliza(25); 
             }
         }
     
@@ -164,8 +175,8 @@ function matchCinco(){
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
                 animal5.src = "./img/Vazio.png"
-               score += 25; //pontuacao; 
-                scoreElement.innerHTML = `${score}`;
+                contabiliza(25); 
+                
             } 
         }
     }
@@ -188,8 +199,7 @@ function matchQuatro(){
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
-                score += 20; //pontuacao; 
-                scoreElement.innerHTML = `${score}`;
+                contabiliza(20); 
             }
         }
     
@@ -206,8 +216,7 @@ function matchQuatro(){
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
-                score += 20; //pontuacao; 
-                scoreElement.innerHTML = `${score}`;
+                contabiliza(20); 
             } 
         }
     }
@@ -227,8 +236,7 @@ function matchTres(){
                 animal1.src = "./img/Vazio.png"
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
-                score += 15; //pontuacao; 
-                scoreElement.innerHTML = `${score}`;
+                contabiliza(15); 
             }
         }
     
@@ -243,8 +251,7 @@ function matchTres(){
                 animal1.src = "./img/Vazio.png"
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
-                score += 15; //pontuacao; 
-                scoreElement.innerHTML = `${score}`;
+                contabiliza(15); 
             } 
         }
     }
@@ -305,13 +312,16 @@ function gerarAnimais(){
     }
 
 }
-let duracao = 1 * 60 + 10 ; 
+// no inicio do jogo ->   quando voltar do pause -> atualizarTimer(restante);
+let duracao = 1 * 60 + 10; 
+let restante;
 let inicio = Date.now();   
+//CHAMAR NO CASO 1 O inicio = date.now()  
 
-    function atualizarTimer() {
+    function atualizarTimer(duracao) {
         let agora = Date.now();
         let decorrido = Math.floor((agora - inicio) / 1000);
-        let restante = duracao - decorrido;
+        restante = duracao - decorrido;
         let relogio = document.getElementById("timer");
         let min, seg;
         let segundo;
@@ -334,19 +344,23 @@ let inicio = Date.now();
         relogio.innerHTML= `<p>${minuto}:${segundo} </p>`;
     }
     
-    // Atualizar timer na tela a função é chamada de 
-    setInterval(() => {
-                atualizarTimer()
-        }, 1000);
 
 //parte de Score/Game Over (nao tem muita coisa feita-se precisar pode apagar a partir daqui!)       
-let GameOver = false;
-let score = 0;
+//let GameOver = false;
 
-
-const handleGameOver = () =>{
+function handleGameOver() {
     clearInterval(setIntervalId);
     alert("Game Over!");
     location.reload();
 }
   //ate aqui
+
+
+function main (){
+    if (controle === 1){
+        contabiliza()
+        setInterval(() => {
+                atualizarTimer(duracao)
+        }, 1000);
+    }
+}
