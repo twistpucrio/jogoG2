@@ -51,3 +51,30 @@ body{
     border: rgb(189, 56, 118)  0.1em solid;
     border-radius: 0.5em;
 }
+
+#botaoHome{
+    width: 3em; 
+    height: 3em;
+} 
+
+.button{
+    cursor: pointer;
+    border:rgb(219, 156, 188)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    border-radius: 100em ;
+    display: inline; 
+    box-shadow: 0 9px #bdbbbb;
+    padding: 1em;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.button:hover{
+    background-color: rgb(243, 182, 213) ;
+}
+
+.button:active {
+  background-color:  rgb(197, 139, 168);
+  box-shadow: 0 5px #666;
+  transform: translateY(1em);
+}
