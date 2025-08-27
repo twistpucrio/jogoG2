@@ -6,6 +6,9 @@ var colunas = 9;
 var quadradoAtual;
 var quadradoOutro;
 
+let controle = 0; 
+
+
 
 window.addEventListener('load', function() {
     comecarJogo();
@@ -122,6 +125,10 @@ function matchAnimal(){
     matchTres();
 }
 
+let scoreElement = document.getElementById("score");
+scoreElement.innerHTML = 0;
+let score= 0; 
+
 function matchCinco(){
     //verifica linhas
     for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
@@ -132,12 +139,13 @@ function matchCinco(){
             let animal4 = board[l][c+3];
             let animal5 = board[l][c+4];
             if (animal1.src == animal2.src && animal2.src == animal3.src && animal3.src == animal4.src && animal4.src == animal5.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                animal4.src = "./img/Vazio.png"
-                animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                animal1.src = "./img/Vazio.png";
+                animal2.src = "./img/Vazio.png";
+                animal3.src = "./img/Vazio.png";
+                animal4.src = "./img/Vazio.png";
+                animal5.src = "./img/Vazio.png";
+                score += 25; //pontuacao; 
+                scoreElement.innerHTML = `${score}`;
             }
         }
     
@@ -156,7 +164,8 @@ function matchCinco(){
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
                 animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+               score += 25; //pontuacao; 
+                scoreElement.innerHTML = `${score}`;
             } 
         }
     }
@@ -179,7 +188,8 @@ function matchQuatro(){
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score += 20; //pontuacao; 
+                scoreElement.innerHTML = `${score}`;
             }
         }
     
@@ -196,7 +206,8 @@ function matchQuatro(){
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
                 animal4.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score += 20; //pontuacao; 
+                scoreElement.innerHTML = `${score}`;
             } 
         }
     }
@@ -216,7 +227,8 @@ function matchTres(){
                 animal1.src = "./img/Vazio.png"
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score += 15; //pontuacao; 
+                scoreElement.innerHTML = `${score}`;
             }
         }
     
@@ -231,7 +243,8 @@ function matchTres(){
                 animal1.src = "./img/Vazio.png"
                 animal2.src = "./img/Vazio.png"
                 animal3.src = "./img/Vazio.png"
-                // colocar pontuação aqui
+                score += 15; //pontuacao; 
+                scoreElement.innerHTML = `${score}`;
             } 
         }
     }
