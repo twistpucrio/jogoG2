@@ -335,4 +335,5 @@ const handleGameOver = () =>{
     clearInterval(setIntervalId);
     alert("Game Over!");
     location.reload();
+}
   //ate aqui

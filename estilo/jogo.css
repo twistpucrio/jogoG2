@@ -42,15 +42,6 @@ body{
 
 }
 
-#back{
-    margin: 0.5em;
-    padding: 0.5em;
-    color: lightcoral;
-    text-decoration: none;
-    background-color: rgb(243, 182, 213);
-    border: rgb(189, 56, 118)  0.1em solid;
-    border-radius: 0.5em;
-}
 
 #botaoHome{
     width: 3em; 
