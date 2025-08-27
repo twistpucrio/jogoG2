@@ -112,6 +112,20 @@ a:hover{
     text-decoration: none; 
 }
 
+.tutorial{
+    width: 25em;
+    margin: 4em;
+    box-shadow: 0 0.5em 0.5em 0 grey;
+    border-radius: 3em;
+    display: inline-block;
+}
+
+#seta{
+    width: 20em;
+    height: 30em;
+    display: inline-block;
+
+}
 
 #box{
     backdrop-filter: blur (8px);
@@ -129,17 +143,6 @@ a:hover{
     text-align: justify ;
     font-family: 'Arial';
     color: rgb(119, 27, 65);
-}
-
-.tutorial{
-    width: 25em;
-    margin: 1em;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 5em;
-    box-shadow:  0 0.1em 8px 0 grey;
 }
 
 

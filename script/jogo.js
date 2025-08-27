@@ -321,7 +321,7 @@ let inicio = Date.now();
 
         if (restante <= 0) {
             console.log("Acabou")
-            relogio.innerHTML= "⏰ Acabou!";
+            relogio.innerHTML= "⏰";
             return; 
         }
 
@@ -338,4 +338,15 @@ let inicio = Date.now();
     setInterval(() => {
                 atualizarTimer()
         }, 1000);
-    
+
+//parte de Score/Game Over (nao tem muita coisa feita-se precisar pode apagar a partir daqui!)       
+let GameOver = false;
+let score = 0;
+
+
+const handleGameOver = () =>{
+    clearInterval(setIntervalId);
+    alert("Game Over!");
+    location.reload();
+}
+  //ate aqui
