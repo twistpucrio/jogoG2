@@ -51,8 +51,15 @@ a:hover{
 
 .tutorial{
     width: 25em;
-    margin: 2em;
+    margin: 4em;
     box-shadow: 0 0.5em 0.5em 0 grey;
     border-radius: 3em;
     display: inline-block;
+}
+
+#seta{
+    width: 20em;
+    height: 30em;
+    display: inline-block;
+
 }
