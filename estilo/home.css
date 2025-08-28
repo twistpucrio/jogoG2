@@ -71,9 +71,11 @@
 
 
 body{
+
     background-image: url("../img/background_deitado.jpg");
     background-repeat: no-repeat;
 }
+
 
 nav{
     margin:0 auto; 

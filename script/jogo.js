@@ -6,6 +6,9 @@ var colunas = 9;
 var quadradoAtual;
 var quadradoOutro;
 
+let controle = 0; 
+
+
 
 window.addEventListener('load', function() {
     comecarJogo();
@@ -119,6 +122,11 @@ function dragEnd(){
 }
 
 
+let scoreElement = document.getElementById("score");
+scoreElement.innerHTML = 0;
+let score= 0; 
+
+
 function matchAnimais(numMatch){
         for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
             for (let c = 0; c < colunas - (numMatch-1); c++){
@@ -130,13 +138,15 @@ function matchAnimais(numMatch){
                 let verificaImagens = true;
                 for (let i = 0; i < numMatch-1; i++){
                     if (animaisMatch[i].src != animaisMatch[i+1].src){
-                        verificaImagens = false
+                        verificaImagens = false;
                     }
                 }
 
                 if (verificaImagens == true){
                     for (let i = 0; i<numMatch; i++){
-                        animaisMatch[i].src ="./img/Vazio.png"
+                        animaisMatch[i].src ="./img/Vazio.png";
+                        score += (5*numMatch); //pontuacao; 
+                        scoreElement.innerHTML = `${score}`;
                     }
                 }   
     } 
@@ -151,17 +161,19 @@ function matchAnimais(numMatch){
                     let verificaImagens = true;
                     for (let i = 0; i < numMatch-1; i++){
                         if (animaisMatch[i].src != animaisMatch[i+1].src){
-                            verificaImagens = false
+                            verificaImagens = false;
                         }
                     }
 
                     if (verificaImagens == true){
                         for (let i = 0; i<numMatch; i++){
-                            animaisMatch[i].src ="./img/Vazio.png"
+                            animaisMatch[i].src ="./img/Vazio.png";
+                            score += (5*numMatch); //pontuacao; 
+                            scoreElement.innerHTML = `${score}`;
                     }
                 }   
     }  
-}
+     }
     }
 
 }
