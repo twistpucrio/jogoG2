@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo</title>
+    <title>Pawfect Match</title>
 
     <link rel="icon" href="img/Coelhinho.png">
-    <script src="script/jogo.js"></script>
 
     <link rel="stylesheet" href="estilo/jogo.css">
     <link rel="stylesheet" href="estilo/test.css">
@@ -19,6 +18,11 @@
                 <img  id="botaoHome" src="img/home.png" alt="index">
             </a> 
         </button> 
+
+         <button id="botaoPause" onclick="pause()"   class="button">  
+                <img  id="botaoPause" src="img/Coelhinho.png" alt="index"> 
+        </button> 
+
         <header id="cab"></header>
 
         <section id="main">
@@ -33,15 +37,13 @@
             <div id="board">
 
             </div>
-
-
-            <span class="score"> Score: 0</span>
         </section>
 
         <footer id="rod"></footer>
 
         
     </div>
+    <a id="proxNivel" href="nivel2.html" hidden>prox nivel</a> 
     <script src="script/jogo.js"></script>
 </body>
 </html>
