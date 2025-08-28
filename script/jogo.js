@@ -351,16 +351,27 @@ function handleGameOver() {
         perdeu= true; 
     }
     if (perdeu){
-        alert("Voce perdeu :( "); 
+        alert("Voce perdeu :( ");
+       
     }
     else if (ganhou) {
         alert("Voce ganhou :) "); 
     }
+    controle=0; 
+
     location.reload();
+    
 }
 
-function pause(){
-        alert("Jogo pausado "); 
+function botaopause(){
+        controle=2;  
+        let conf = confirm("deseja voltar jogar???");
+        if (conf == true){
+            controle=1; 
+        }
+        else{
+           gameOver = true;
+        }
 }
 
 
@@ -371,22 +382,19 @@ function main (){
     window.setInterval(function(){
         deslizarAnimais();
         gerarAnimais();
+        if (controle === 3){
+           controle =  0;
+        }
         matchAnimal(); 
         if (controle === 0){
             controle = 1; 
         }
-
         if(gameOver){
-            
             controle = 3;
             handleGameOver();
         } 
-        /*if(pause){
-            controle=2; 
-        }*/ 
     },100);
     });
-    
         setInterval(() => {
             if (controle === 1){
                 atualizarTimer(duracao)
