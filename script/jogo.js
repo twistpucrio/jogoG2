@@ -10,7 +10,8 @@ var quadradoOutro;
 window.addEventListener('load', function() {
     comecarJogo();
     window.setInterval(function(){
-        matchAnimal();
+        matchAnimais(5);
+        matchAnimais(4);
         matchAnimais(3);
         deslizarAnimais();
         gerarAnimais();
@@ -117,22 +118,17 @@ function dragEnd(){
 
 }
 
-function matchAnimal(){
-    //matchCinco();
-    //matchQuatro();
-    //matchTres();
-    matchAnimais()
-}
 
 function matchAnimais(numMatch){
         for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
             for (let c = 0; c < colunas - (numMatch-1); c++){
-                let animaisMatch = [board[l][c],]
-                for (let i = 1; i <= numMatch; i++){
-                    animaisMatch += board[l][c+i]
+                let animaisMatch = [board[l][c]]
+                for (let i = 1; i < numMatch; i++){
+                    animaisMatch.push(board[l][c+i])
                 }
+                console.log(animaisMatch);
                 let verificaImagens = true;
-                for (let i = 0; i < numMatch; i++){
+                for (let i = 0; i < numMatch-1; i++){
                     if (animaisMatch[i].src != animaisMatch[i+1].src){
                         verificaImagens = false
                     }
@@ -145,139 +141,27 @@ function matchAnimais(numMatch){
                 }   
     } 
     //verifica colunas
-    for (let c = 0; c < colunas; c++){
-        for(let l = 0; l < linhas - (numMatch-1); l++){
-            let animal1 = board[l][c];
-            let animal2 = board[l+1][c];
-            let animal3 = board[l+2][c];
-            let animal4 = board[l+3][c];
-            let animal5 = board[l+4][c];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && animal3.src == animal4.src && animal4.src == animal5.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                animal4.src = "./img/Vazio.png"
-                animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            } 
-        }
-    }
-    }
+            for (let c = 0; c < colunas ; c++){/*Loop de para cada linha do board */
+                for (let l = 0; l < linhas - (numMatch-1); l++){
+                    let animaisMatch = [board[l][c]]
+                    for (let i = 1; i < numMatch; i++){
+                        animaisMatch.push(board[l+i][c])
+                    }
+                    console.log(animaisMatch);
+                    let verificaImagens = true;
+                    for (let i = 0; i < numMatch-1; i++){
+                        if (animaisMatch[i].src != animaisMatch[i+1].src){
+                            verificaImagens = false
+                        }
+                    }
 
+                    if (verificaImagens == true){
+                        for (let i = 0; i<numMatch; i++){
+                            animaisMatch[i].src ="./img/Vazio.png"
+                    }
+                }   
+    }  
 }
-
-function matchCinco(){
-    //verifica linhas
-    for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
-        for (let c = 0; c < colunas - 4; c++){
-            let animal1 = board[l][c];
-            let animal2 = board[l][c+1];
-            let animal3 = board[l][c+2];
-            let animal4 = board[l][c+3];
-            let animal5 = board[l][c+4];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && animal3.src == animal4.src && animal4.src == animal5.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                animal4.src = "./img/Vazio.png"
-                animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            }
-        }
-    
-    } 
-    //verifica colunas
-    for (let c = 0; c < colunas; c++){
-        for(let l = 0; l < linhas - 4; l++){
-            let animal1 = board[l][c];
-            let animal2 = board[l+1][c];
-            let animal3 = board[l+2][c];
-            let animal4 = board[l+3][c];
-            let animal5 = board[l+4][c];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && animal3.src == animal4.src && animal4.src == animal5.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                animal4.src = "./img/Vazio.png"
-                animal5.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            } 
-        }
-    }
-
-}
-
-
-
-
-function matchQuatro(){
-    //verifica linhas
-    for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
-        for (let c = 0; c < colunas - 3; c++){
-            let animal1 = board[l][c];
-            let animal2 = board[l][c+1];
-            let animal3 = board[l][c+2];
-            let animal4 = board[l][c+3];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && animal3.src == animal4.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                animal4.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            }
-        }
-    
-    } 
-    //verifica colunas
-    for (let c = 0; c < colunas; c++){
-        for(let l = 0; l < linhas - 3; l++){
-            let animal1 = board[l][c];
-            let animal2 = board[l+1][c];
-            let animal3 = board[l+2][c];
-            let animal4 = board[l+3][c];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && animal3.src == animal4.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                animal4.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            } 
-        }
-    }
-
-}
-
-
-
-function matchTres(){
-    //verifica linhas
-    for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
-        for (let c = 0; c < colunas - 2; c++){
-            let animal1 = board[l][c];
-            let animal2 = board[l][c+1];
-            let animal3 = board[l][c+2];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            }
-        }
-    
-    } 
-    //verifica colunas
-    for (let c = 0; c < colunas; c++){
-        for(let l = 0; l < linhas - 2; l++){
-            let animal1 = board[l][c];
-            let animal2 = board[l+1][c];
-            let animal3 = board[l+2][c];
-            if (animal1.src == animal2.src && animal2.src == animal3.src && !animal1.src.includes("Vazio")){
-                animal1.src = "./img/Vazio.png"
-                animal2.src = "./img/Vazio.png"
-                animal3.src = "./img/Vazio.png"
-                // colocar pontuação aqui
-            } 
-        }
     }
 
 }
