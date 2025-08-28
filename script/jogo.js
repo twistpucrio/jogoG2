@@ -12,25 +12,20 @@ let scoreElement = document.getElementById("score");
 scoreElement.innerHTML = 0;
 let score= 0; 
 
+let duracao = 0 * 60 + 10; 
+let restante;
+let inicio; 
 
-window.addEventListener('load', function() {
-    comecarJogo();
-    window.setInterval(function(){
-        deslizarAnimais();
-        gerarAnimais();
-        matchAnimal(); 
-    },100);
-    controle = 1; 
-});
-
-
-if (controle === 1){
-    
-}
+let gameOver = false;
+let ganhou = false;
+let perdeu = false;
 
 function contabiliza (pontos){
-    score += pontos; 
-    scoreElement.innerHTML = `${score}`;
+    if (controle === 1  ){
+        console.log("oi");
+        score += pontos; 
+        scoreElement.innerHTML = `${score}`;
+    }
 }
 
 function animalAleatorio(){
@@ -313,9 +308,8 @@ function gerarAnimais(){
 
 }
 // no inicio do jogo ->   quando voltar do pause -> atualizarTimer(restante);
-let duracao = 1 * 60 + 10; 
-let restante;
-let inicio = Date.now();   
+
+inicio = Date.now();   
 //CHAMAR NO CASO 1 O inicio = date.now()  
 
     function atualizarTimer(duracao) {
@@ -332,6 +326,7 @@ let inicio = Date.now();
         if (restante <= 0) {
             console.log("Acabou")
             relogio.innerHTML= "⏰";
+            gameOver = true;
             return; 
         }
 
@@ -346,21 +341,57 @@ let inicio = Date.now();
     
 
 //parte de Score/Game Over (nao tem muita coisa feita-se precisar pode apagar a partir daqui!)       
-//let GameOver = false;
+//
 
 function handleGameOver() {
-    clearInterval(setIntervalId);
-    alert("Game Over!");
+     if (score>=50){
+        ganhou=true; 
+    }
+    else{
+        perdeu= true; 
+    }
+    if (perdeu){
+        alert("Voce perdeu :( "); 
+    }
+    else if (ganhou) {
+        alert("Voce ganhou :) "); 
+    }
     location.reload();
 }
-  //ate aqui
+
+function pause(){
+        alert("Jogo pausado "); 
+}
 
 
 function main (){
-    if (controle === 1){
-        contabiliza()
+    
+    window.addEventListener('load', function() {
+    comecarJogo();
+    window.setInterval(function(){
+        deslizarAnimais();
+        gerarAnimais();
+        matchAnimal(); 
+        if (controle === 0){
+            controle = 1; 
+        }
+
+        if(gameOver){
+            
+            controle = 3;
+            handleGameOver();
+        } 
+        /*if(pause){
+            controle=2; 
+        }*/ 
+    },100);
+    });
+    
         setInterval(() => {
+            if (controle === 1){
                 atualizarTimer(duracao)
+            }
         }, 1000);
     }
-}
+
+main();

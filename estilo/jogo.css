@@ -48,6 +48,11 @@ body{
     height: 3em;
 } 
 
+#botaoPause{
+    width: 3em; 
+    height: 3em;
+} 
+
 .button{
     cursor: pointer;
     border:rgb(219, 156, 188)  2px solid ; 
