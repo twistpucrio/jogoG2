@@ -18,7 +18,13 @@ let inicio;
 
 let gameOver = false;
 let ganhou = false;
-let perdeu = false;
+
+let mainInterval;
+let timerInterval;
+
+let proxnivel = document.getElementById("proxNivel");
+let boardElem = document.getElementById("board");
+ 
 
 function contabiliza (pontos){
     if (controle === 1  ){
@@ -54,7 +60,7 @@ function comecarJogo(){
 
 
     
-            document.getElementById("board").append(quadrado); // adiciona quadrado ao board que será visualizado
+            boardElem.append(quadrado); // adiciona quadrado ao board que será visualizado
             linha.push(quadrado); //adiciona quadrado a linha para calcular combinações
         }
         board.push(linha);
@@ -341,29 +347,31 @@ inicio = Date.now();
     
 
 //parte de Score/Game Over (nao tem muita coisa feita-se precisar pode apagar a partir daqui!)       
-//
 
-function handleGameOver() {
-     if (score>=50){
+
+function handleGameOver(n) {
+    clearInterval(mainInterval);
+    clearInterval(timerInterval);
+    let texto;
+     if (score>= n){
         ganhou=true; 
+        texto = "Voce ganhou";
     }
     else{
-        perdeu= true; 
+        ganhou= false; 
+        texto = "Voce perdeu";
     }
-    if (perdeu){
-        alert("Voce perdeu :( ");
-       
+    if (confirm( texto + ", proximo nivel?")){
+        proxnivel.click();
     }
-    else if (ganhou) {
-        alert("Voce ganhou :) "); 
-    }
-    controle=0; 
-
-    location.reload();
-    
+    else{
+        controle=0;
+        location.reload();
+    }    
 }
 
-function botaopause(){
+
+/*function btnPause(){
         controle=2;  
         let conf = confirm("deseja voltar jogar???");
         if (conf == true){
@@ -372,6 +380,19 @@ function botaopause(){
         else{
            gameOver = true;
         }
+}*/
+
+function btnPause(){
+    boardElem.style.visibility = 'hidden';
+    setTimeout(() => {
+        controle =2;
+        let agora = Date.now();
+        alert("Jogo pausado "); 
+        let decorrido = Date.now() - agora;
+        inicio += decorrido;
+        boardElem.style.visibility = 'visible';
+        controle = 1;
+    }, 0);// setTimout para renderizar o css    
 }
 
 
@@ -379,7 +400,7 @@ function main (){
     
     window.addEventListener('load', function() {
     comecarJogo();
-    window.setInterval(function(){
+    mainInterval = window.setInterval(function(){
         deslizarAnimais();
         gerarAnimais();
         if (controle === 3){
@@ -391,11 +412,11 @@ function main (){
         }
         if(gameOver){
             controle = 3;
-            handleGameOver();
+            handleGameOver(50);
         } 
     },100);
     });
-        setInterval(() => {
+        timerInterval = setInterval(() => {
             if (controle === 1){
                 atualizarTimer(duracao)
             }
@@ -403,3 +424,5 @@ function main (){
     }
 
 main();
+
+
