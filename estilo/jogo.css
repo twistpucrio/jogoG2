@@ -16,6 +16,8 @@ body{
     padding: 0.01em;
     width: 6em;
     height: 3em;
+    margin-left: 40em;
+    margin-top: 4em;
     border-radius: 0.1em;
     align-items: center;
     text-align: center;
@@ -29,6 +31,8 @@ body{
     font-size: 2em; 
     background-color: lightsalmon;
     padding: 0.5em;
+    margin-top: -4em;
+    margin-left: 40em;
     width: 6em;
     height: 3em;
     border-radius: 0.1em;
@@ -39,7 +43,6 @@ body{
     font-size: 1em;
     color: rgb(238, 238, 240);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 

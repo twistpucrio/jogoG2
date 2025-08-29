@@ -12,7 +12,7 @@ let scoreElement = document.getElementById("score");
 scoreElement.innerHTML = 0;
 let score= 0; 
 
-let duracao = 0 * 60 + 10; 
+let duracao = 1 * 60 + 10; 
 let restante;
 let inicio; 
 
