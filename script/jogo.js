@@ -27,8 +27,7 @@ let boardElem = document.getElementById("board");
  
 
 function contabiliza (pontos){
-    if (controle === 1  ){
-        console.log("oi");
+    if (controle === 1 ){
         score += pontos; 
         scoreElement.innerHTML = `${score}`;
     }
