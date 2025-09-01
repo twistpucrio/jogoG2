@@ -16,9 +16,11 @@ window.addEventListener('load', function() {
         matchAnimais(5);
         matchAnimais(4);
         matchAnimais(3);
-        deslizarAnimais();
-        gerarAnimais();
     },100);
+    window.setInterval(function(){
+    deslizarAnimais();
+    gerarAnimais();
+    },300);
 });
 
 function animalAleatorio(){
@@ -110,6 +112,7 @@ function dragEnd(){
         quadradoAtual.src = imagemOutra; // faz o quadrado inicial ter a imagem do quadrado destino, inversão
         quadradoOutro.src = imagemAtual; // faz o quadrado de destino ter a imagem do quadrado inicial, inversão
         
+        
         let movimentoValido = verificaValido(); // verifica se a inversão das imagems causou um alinhamento de 3 peças ou mais
         if (!movimentoValido){ // se não houve alinhamento, o if é ativado e as imagens voltam a posição inicial delas usando o mesmo mecanismo de antes
             imagemAtual = quadradoAtual.src;
@@ -120,11 +123,6 @@ function dragEnd(){
     }
 
 }
-
-
-let scoreElement = document.getElementById("score");
-scoreElement.innerHTML = 0;
-let score= 0; 
 
 
 function matchAnimais(numMatch){
@@ -145,8 +143,6 @@ function matchAnimais(numMatch){
                 if (verificaImagens == true){
                     for (let i = 0; i<numMatch; i++){
                         animaisMatch[i].src ="./img/Vazio.png";
-                        score += (5*numMatch); //pontuacao; 
-                        scoreElement.innerHTML = `${score}`;
                     }
                 }   
     } 
@@ -168,8 +164,6 @@ function matchAnimais(numMatch){
                     if (verificaImagens == true){
                         for (let i = 0; i<numMatch; i++){
                             animaisMatch[i].src ="./img/Vazio.png";
-                            score += (5*numMatch); //pontuacao; 
-                            scoreElement.innerHTML = `${score}`;
                     }
                 }   
     }  
