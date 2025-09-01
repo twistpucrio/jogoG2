@@ -1,10 +1,36 @@
-@media(400px <= width <= 800px ){
 
+@media screen and (max-width: 700px ){
+    /*celular*/
+    /* TELA Como jogar */
+    #como{
+        width: 10em;
+        margin-left: 8em;
+        margin-bottom: 1em;
+    }
 
+    #jogar{
+        width: 10em;
+        margin-left: 1.5em;
+    }
 
+    #botaoHome{
+        width: 1.8em; 
+        height: 1.8em;
+    }     
 
+    .tutorial{
+    width: 12em;
+    margin-left: 1em;
+    display: inline-block;
+    }
 
+    #tut2{
+        margin-top: -20em;
+    }
 
+    #seta{  
+        visibility: hidden;
+    }
 
 
     
