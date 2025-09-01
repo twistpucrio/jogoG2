@@ -6,22 +6,34 @@ var colunas = 9;
 var quadradoAtual;
 var quadradoOutro;
 
-let controle = 0; 
+let controle = 0;
+
+let scoreElement = document.getElementById("score");
+scoreElement.innerHTML = 0;
+let score= 0; 
+
+let duracao = 1 * 60 + 10; 
+let restante;
+let inicio; 
+
+let gameOver = false;
+let ganhou = false;
+
+let mainInterval;
+let timerInterval;
+
+let proxnivel = document.getElementById("proxNivel");
+let boardElem = document.getElementById("board");
+ 
+
+function contabiliza (pontos){
+    if (controle === 1 ){
+        score += pontos; 
+        scoreElement.innerHTML = `${score}`;
+    }
+}
 
 
-
-window.addEventListener('load', function() {
-    comecarJogo();
-    window.setInterval(function(){
-        matchAnimais(5);
-        matchAnimais(4);
-        matchAnimais(3);
-    },100);
-    window.setInterval(function(){
-    deslizarAnimais();
-    gerarAnimais();
-    },300);
-});
 
 function animalAleatorio(){
     return animais[Math.floor(Math.random() * animais.length)];
@@ -49,7 +61,7 @@ function comecarJogo(){
 
 
     
-            document.getElementById("board").append(quadrado); // adiciona quadrado ao board que será visualizado
+            boardElem.append(quadrado); // adiciona quadrado ao board que será visualizado
             linha.push(quadrado); //adiciona quadrado a linha para calcular combinações
         }
         board.push(linha);
@@ -125,6 +137,7 @@ function dragEnd(){
 }
 
 
+
 function matchAnimais(numMatch){
         for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
             for (let c = 0; c < colunas - (numMatch-1); c++){
@@ -132,7 +145,6 @@ function matchAnimais(numMatch){
                 for (let i = 1; i < numMatch; i++){
                     animaisMatch.push(board[l][c+i])
                 }
-                console.log(animaisMatch);
                 let verificaImagens = true;
                 for (let i = 0; i < numMatch-1; i++){
                     if (animaisMatch[i].src != animaisMatch[i+1].src){
@@ -153,7 +165,6 @@ function matchAnimais(numMatch){
                     for (let i = 1; i < numMatch; i++){
                         animaisMatch.push(board[l+i][c])
                     }
-                    console.log(animaisMatch);
                     let verificaImagens = true;
                     for (let i = 0; i < numMatch-1; i++){
                         if (animaisMatch[i].src != animaisMatch[i+1].src){
@@ -164,14 +175,14 @@ function matchAnimais(numMatch){
                     if (verificaImagens == true){
                         for (let i = 0; i<numMatch; i++){
                             animaisMatch[i].src ="./img/Vazio.png";
+                            contabiliza(5*numMatch);
                     }
                 }   
     }  
      }
-    }
 
-}
 
+        }}
 
 function verificaValido(){
     //verifica linhas
@@ -226,13 +237,15 @@ function gerarAnimais(){
     }
 
 }
-let duracao = 1 * 60 + 10 ; 
-let inicio = Date.now();   
+// no inicio do jogo ->   quando voltar do pause -> atualizarTimer(restante);
 
-    function atualizarTimer() {
+inicio = Date.now();   
+//CHAMAR NO CASO 1 O inicio = date.now()  
+
+    function atualizarTimer(duracao) {
         let agora = Date.now();
         let decorrido = Math.floor((agora - inicio) / 1000);
-        let restante = duracao - decorrido;
+        restante = duracao - decorrido;
         let relogio = document.getElementById("timer");
         let min, seg;
         let segundo;
@@ -243,6 +256,7 @@ let inicio = Date.now();
         if (restante <= 0) {
             console.log("Acabou")
             relogio.innerHTML= "⏰";
+            gameOver = true;
             return; 
         }
 
@@ -255,19 +269,86 @@ let inicio = Date.now();
         relogio.innerHTML= `<p>${minuto}:${segundo} </p>`;
     }
     
-    // Atualizar timer na tela a função é chamada de 
-    setInterval(() => {
-                atualizarTimer()
-        }, 1000);
 
 //parte de Score/Game Over (nao tem muita coisa feita-se precisar pode apagar a partir daqui!)       
-let GameOver = false;
-let score = 0;
 
 
-const handleGameOver = () =>{
-    clearInterval(setIntervalId);
-    alert("Game Over!");
-    location.reload();
+function handleGameOver(n) {
+    clearInterval(mainInterval);
+    clearInterval(timerInterval);
+    let texto;
+     if (score>= n){
+        ganhou=true; 
+        texto = "Voce ganhou";
+    }
+    else{
+        ganhou= false; 
+        texto = "Voce perdeu";
+    }
+    if (confirm( texto + ", proximo nivel?")){
+        proxnivel.click();
+    }
+    else{
+        controle=0;
+        location.reload();
+    }    
 }
-  //ate aqui
+
+
+/*function btnPause(){
+        controle=2;  
+        let conf = confirm("deseja voltar jogar???");
+        if (conf == true){
+            controle=1; 
+        }
+        else{
+           gameOver = true;
+        }
+}*/
+
+function btnPause(){
+    boardElem.style.visibility = 'hidden';
+    setTimeout(() => {
+        controle =2;
+        let agora = Date.now();
+        alert("Jogo pausado "); 
+        let decorrido = Date.now() - agora;
+        inicio += decorrido;
+        boardElem.style.visibility = 'visible';
+        controle = 1;
+    }, 0);// setTimout para renderizar o css    
+}
+
+
+function main (){
+    
+    window.addEventListener('load', function() {
+    comecarJogo();
+    mainInterval = window.setInterval(function(){
+        deslizarAnimais();
+        gerarAnimais();
+        if (controle === 3){
+           controle =  0;
+        }
+        matchAnimais(5);
+        matchAnimais(4);
+        matchAnimais(3); 
+        if (controle === 0){
+            controle = 1; 
+        }
+        if(gameOver){
+            controle = 3;
+            handleGameOver(50);
+        } 
+    },100);
+    });
+        timerInterval = setInterval(() => {
+            if (controle === 1){
+                atualizarTimer(duracao)
+            }
+        }, 1000);
+    }
+
+main();
+
+

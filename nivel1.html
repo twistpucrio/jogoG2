@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo</title>
-
+    <title>Pawfect Match</title>
     <link rel="icon" href="img/Coelhinho.png">
-    <script src="script/jogo.js"></script>
-
     <link rel="stylesheet" href="estilo/jogo.css">
-    <link rel="stylesheet" href="estilo/test.css">
+
 </head>
 <body>
 
@@ -19,6 +16,11 @@
                 <img  id="botaoHome" src="img/home.png" alt="index">
             </a> 
         </button> 
+
+         <button onclick="btnPause()"   class="button">  
+                <img  id="botaoPause" src="img/Coelhinho.png" alt="index"> 
+        </button> 
+
         <header id="cab"></header>
 
         <section id="main">
@@ -28,20 +30,62 @@
                 <span id="labelScore"> Score: </span><span id="score"></span>
             </div>
 
-            <h1>Pawfect Match</h1>
-
             <div id="board">
 
             </div>
-
-
-            <span class="score"> Score: 0</span>
         </section>
 
         <footer id="rod"></footer>
 
-        
+<!--
     </div>
+    <div id="perdeu">
+        <header id="cab"> 
+            <h1> Voce perdeu!!! </h1>
+        </header>
+        <section id="main">
+            <button class="button"> 
+                <a href="index.html"> 
+                    <img  id="botaoHome" src="img/home.png" alt="index">
+                </a> 
+            </button> 
+
+            <button class="button"> 
+                    <a id="botaoDeNovo" href="nivel1.html"> 
+                        <img id="botaoDeNovo" src="img/Gatinho.png" alt="jogarNovamente">
+                    </a>
+            </button>
+        </section>
+    </div> 
+
+
+
+    <div id="ganhou">
+        <header id="cab"> 
+            <h1> Voce ganhou!!! </h1>
+        </header>
+        <nav id="menu"></nav>
+        <section id="main">
+
+            <button class="button"> 
+                <a href="nivel2.html"> 
+                    <img  id="botaoProximo" src="img/Pintinho.png" alt="jogarprox">
+                </a> 
+            </button> 
+
+            <button class="button"> 
+                    <a id="botaoDeNovo" href="nivel1.html"> 
+                        <img id="botaoDeNovo" src="img/Gatinho.png" alt="jogarNovamente">
+                    </a>
+            </button>
+        </section>
+    </div> 
+
+
+    <div id="pause"> 
+    </div>
+--> 
+    <a id="proxNivel" href="nivel2.html" hidden>prox nivel</a>
     <script src="script/jogo.js"></script>
 </body>
 </html>
