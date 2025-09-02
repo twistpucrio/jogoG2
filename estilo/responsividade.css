@@ -1,3 +1,4 @@
+
 /*smartfone/celular (home) */ 
 @media screen and (min-width: 301px) and ( max-width: 780px ){
     #titulo{
@@ -38,6 +39,48 @@
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 700px ){
+    /*celular*/
+    /* TELA Como jogar */
+    #como{
+        width: 35%;
+        margin-left: 15%;
+        margin-bottom: 3%;
+    }
+
+    #jogar{
+        width: 35%;
+        margin-left: 4%;
+    }
+
+    #botaoHome{
+        width: 1.8em; 
+        height: 1.8em;
+    }     
+
+    .tutorial{
+        width: 30%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .tutorial{
+    width: 12em;
+    margin-left: 1em;
+    display: inline-block;
+    }
+
+
+    #seta{ 
+        display: inline-block; 
+        width: 13%;
+        height: 13%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+
+        /*visibility: hidden;*/
+    }
 
 }
 
@@ -81,3 +124,43 @@
 }
 
 
+
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 1900px ){
+
+    #como{
+        width: 25%;
+        margin-left: 25%;
+        margin-bottom: 3%;
+    }
+
+    #jogar{
+        width: 28%;
+        margin-left: 4%;
+    }
+
+    #botaoHome{
+        width: 3em; 
+        height: 3em;
+    }     
+
+    .tutorial{
+        width: 25%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+
+    #seta{ 
+        display: inline-block; 
+        width: 13%;
+        height: 13%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+
+        /*visibility: hidden;*/
+    }
+}
