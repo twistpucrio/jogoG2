@@ -24,6 +24,11 @@
         margin-right: 5%;
     }
 
+    .tutorial{
+    width: 12em;
+    margin-left: 1em;
+    display: inline-block;
+    }
 
     #seta{ 
         display: inline-block; 

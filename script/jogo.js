@@ -57,9 +57,6 @@ function comecarJogo(){
             quadrado.addEventListener("drop", dragDrop); // animal cai encima de outro
             quadrado.addEventListener("dragend", dragEnd); // troca dos animais
             
-
-
-
     
             boardElem.append(quadrado); // adiciona quadrado ao board que será visualizado
             linha.push(quadrado); //adiciona quadrado a linha para calcular combinações
@@ -139,6 +136,7 @@ function dragEnd(){
 
 
 function matchAnimais(numMatch){
+    // verifica linhas
         for (let l = 0; l < linhas; l++){/*Loop de para cada linha do board */
             for (let c = 0; c < colunas - (numMatch-1); c++){
                 let animaisMatch = [board[l][c]]
@@ -155,7 +153,10 @@ function matchAnimais(numMatch){
                 if (verificaImagens == true){
                     for (let i = 0; i<numMatch; i++){
                         animaisMatch[i].src ="./img/Vazio.png";
+
                     }
+                    contabiliza(numMatch);
+
                 }   
     } 
     //verifica colunas
@@ -174,9 +175,9 @@ function matchAnimais(numMatch){
 
                     if (verificaImagens == true){
                         for (let i = 0; i<numMatch; i++){
-                            animaisMatch[i].src ="./img/Vazio.png";
-                            contabiliza(5*numMatch);
-                    }
+                            animaisMatch[i].src ="./img/Vazio.png";                           
+                        }
+                    contabiliza(numMatch);
                 }   
     }  
      }
