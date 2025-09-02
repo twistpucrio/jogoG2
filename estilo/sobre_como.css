@@ -52,6 +52,22 @@
     display: inline-block;
 }
 
+#como{
+    width: 26em;
+    margin-left: 28em;
+    margin-bottom: 2.5em;
+
+}
+
+#jogar{
+    width: 28em;
+    margin-left: 3em;
+}
+
+.titulo{
+    display: inline-block;
+}
+
 #botaoHome{
     width: 3em; 
     height: 3em;
@@ -145,6 +161,7 @@ a:hover{
     box-shadow: 0 0.5em 0.5em 0 grey;
     border-radius: 3em;
     display: inline-block;
+    box-sizing: content-box;
 }
 
 #seta{
@@ -153,7 +170,7 @@ a:hover{
     margin-bottom: 8em;
     margin-left: 6em;
     display: inline-block;
-
+    box-sizing: content-box;
 }
 
 #box{
