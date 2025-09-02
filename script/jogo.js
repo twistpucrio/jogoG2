@@ -26,6 +26,14 @@ let proxnivel = document.getElementById("proxNivel");
 let boardElem = document.getElementById("board");
  
 
+let somGatinho = new Audio("./sound/somGatinho.mp3");
+let somUrsinho = new Audio("./sound/somGatinho.mp3");
+let somCachorrinho = new Audio("./sound/somCachorrinho.wav");
+let somPintinho = new Audio("./sound/somPintinho.wav");
+let somCoelhinho = new Audio("./sound/somCoelinho.m4a");
+let somRaposinha = new Audio("./sound/somGatinho.mp3");
+
+
 function contabiliza (pontos){
     if (controle === 1 ){
         score += pontos; 
@@ -151,11 +159,31 @@ function matchAnimais(numMatch){
                 }
 
                 if (verificaImagens == true){
+                    if (animaisMatch[0].src = ".img/Gatinho.png"){
+                        somGatinho.play();
+                    }
+                    else if (animaisMatch[0].src = ".img/Cachorrinho.png"){
+                        somCachorrinho.play();
+                    }
+                    else if (animaisMatch[0].src = ".img/Raposinha.png"){
+                        somRaposinha.play();
+                    }
+                    else if (animaisMatch[0].src = ".img/Ursinho.png"){
+                        somUrsinho.play();
+                    }
+                    else if (animaisMatch[0].src = ".img/Pintinho.png"){
+                        somPintinho.play();
+                    }
+                    else if (animaisMatch[0].src = ".img/Coelinho.png"){
+                        somCoelhinho.play();
+                    }
+
                     for (let i = 0; i<numMatch; i++){
                         animaisMatch[i].src ="./img/Vazio.png";
 
                     }
                     contabiliza(numMatch);
+                    
 
                 }   
     } 
@@ -174,10 +202,29 @@ function matchAnimais(numMatch){
                     }
 
                     if (verificaImagens == true){
+                        if (animaisMatch[0].src = ".img/Gatinho.png"){
+                            somGatinho.play();
+                        }
+                        else if (animaisMatch[0].src = ".img/Cachorrinho.png"){
+                            somCachorrinho.play();
+                        }
+                        else if (animaisMatch[0].src = ".img/Raposinha.png"){
+                            somRaposinha.play();
+                        }
+                        else if (animaisMatch[0].src = ".img/Ursinho.png"){
+                            somUrsinho.play();
+                        }
+                        else if (animaisMatch[0].src = ".img/Pintinho.png"){
+                            somPintinho.play();
+                        }
+                        else if (animaisMatch[0].src = ".img/Coelinho.png"){
+                            somCoelhinho.play();
+                        }
                         for (let i = 0; i<numMatch; i++){
                             animaisMatch[i].src ="./img/Vazio.png";                           
                         }
                     contabiliza(numMatch);
+                    
                 }   
     }  
      }
