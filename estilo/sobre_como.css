@@ -1,11 +1,14 @@
 
+
+
+
 @media screen and (max-width: 768px){
 
 #tituloSobre{
     display: center; 
     text-align: center;
-    width: 14em;
-    height: 5em;
+    width: 19em;
+    height: 5.5em;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -18,7 +21,7 @@
 #tituloEquipe{
     display: center; 
     text-align: center;
-    width: 14em;
+    width: 17em;
     height: 6em;
     display: flex;
     justify-content: center; 
@@ -31,6 +34,13 @@
     margin-left: 28em;
     margin-bottom: 2.5em;
 
+}
+
+#foto{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
 }
 
 #jogar{
@@ -170,21 +180,19 @@ a:hover{
 }
 
 
-/*
+
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
     #tituloSobre{
         display: center; 
         text-align: center;
-        width: 22em;
-        height: 8em;
-        display: inline;
+        width: 26em;
+        height: 6em;
+        display: flex;
         justify-content: center; 
         align-items: center; 
         margin: 0 auto; 
-        margin-top: 3%;
-        margin-left: 31%;
-        margin-bottom: 1.2%;
+        
     }
 
 
@@ -192,14 +200,21 @@ a:hover{
     #tituloEquipe{
         display: center; 
         text-align: center;
-        width: 20em;
-        height: 10em;
-        display: inline;
+        width: 22em;
+        height: 7em;
+        display: flex;
         justify-content: center; 
         align-items: center; 
-        margin: 0 auto; 
-        margin-top: 3%;
-        margin-left: 1.2%;
+        margin: 0 auto;
+    }
+
+
+
+    #foto{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
     }
 
     #botaoHome{
@@ -329,15 +344,13 @@ a:hover{
     #tituloSobre{
         display: center; 
         text-align: center;
-        width: 22em;
-        height: 8em;
-        display: inline;
+        width: 30em;
+        height: 7em;
+        display: flex;
         justify-content: center; 
         align-items: center; 
         margin: 0 auto; 
-        margin-top: 3%;
-        margin-left: 31%;
-        margin-bottom: 1.2%;
+        
     }
 
 
@@ -345,20 +358,26 @@ a:hover{
     #tituloEquipe{
         display: center; 
         text-align: center;
-        width: 20em;
-        height: 10em;
-        display: inline;
+        width: 25em;
+        height: 8esm;
+        display: flex;
         justify-content: center; 
         align-items: center; 
-        margin: 0 auto; 
-        margin-top: 3%;
-        margin-left: 1.2%;
+        margin: 0 auto;
     }
 
     #botaoHome{
         width: 3em; 
         height: 3em;
     } 
+    
+
+    #foto{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    }
 
     .button{
         cursor: pointer;
@@ -476,8 +495,6 @@ a:hover{
     }
 }
 
-
-*/
 
 
 
