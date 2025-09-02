@@ -42,18 +42,39 @@
 }
 
 @media screen and (min-width: 780px) and ( max-width: 980px ){
+
+    #titulo{
+        display: center; 
+        text-align: center;
+        width: 27em;
+        height: 13em;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+        margin-top: 5%; 
+    }
+
+    .niveis{
+        font-size: 19pt;
+        width: 8em ;
+    }
+
   .button1{
-        margin-left: 70%;
-        margin-top: 25%;
+        margin-left: 78%;
+        margin-top: 3%;
         background-color: brown;
     }
 
+    #botaocomo{
+    width: 2.3em; 
+    height: 2.3em;
+    } 
 
-}
-
-/*3840 x 2160 pixels*/
-/*tv (home) */ 
-@media( width >= 1024px ){
+    #botaosobre{
+        width: 2.3em; 
+        height: 2.3em;
+    }
 
 
 
