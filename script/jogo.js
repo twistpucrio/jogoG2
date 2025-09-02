@@ -12,7 +12,7 @@ let scoreElement = document.getElementById("score");
 scoreElement.innerHTML = 0;
 let score= 0; 
 
-let duracao = 1 * 60 + 10; 
+let duracao; 
 let restante;
 let inicio; 
 
@@ -129,6 +129,10 @@ function dragEnd(){
             quadradoAtual.src = imagemOutra;
             quadradoOutro.src = imagemAtual;
         } 
+        else if(controle === 0){
+            controle = 1;
+            
+        }
     }
 
 }
@@ -321,35 +325,6 @@ function btnPause(){
 }
 
 
-function main (){
-    
-    window.addEventListener('load', function() {
-    comecarJogo();
-    mainInterval = window.setInterval(function(){
-        deslizarAnimais();
-        gerarAnimais();
-        if (controle === 3){
-           controle =  0;
-        }
-        matchAnimais(5);
-        matchAnimais(4);
-        matchAnimais(3); 
-        if (controle === 0){
-            controle = 1; 
-        }
-        if(gameOver){
-            controle = 3;
-            handleGameOver(50);
-        } 
-    },100);
-    });
-        timerInterval = setInterval(() => {
-            if (controle === 1){
-                atualizarTimer(duracao)
-            }
-        }, 1000);
-    }
 
-main();
 
 
