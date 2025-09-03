@@ -4,65 +4,7 @@
 }
 
 
-@media screen and (max-width: 768px){
-
-#tituloSobre{
-    display: center; 
-    text-align: center;
-    width: 19em;
-    height: 5.5em;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 0 auto; 
-    
-}
-
-
-
-#tituloEquipe{
-    display: center; 
-    text-align: center;
-    width: 17em;
-    height: 6em;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 0 auto;
-}
-
-#foto{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 0 auto; 
-}
-
-#jogar{
-    width: 28em;
-    margin-left: 3em;
-}
-
-.titulo{
-    display: inline-block;
-}
-
-#como{
-    width: 26em;
-    margin-left: 28em;
-    margin-bottom: 2.5em;
-
-}
-
-#jogar{
-    width: 28em;
-    margin-left: 3em;
-}
-
-.titulo{
-    display: inline-block;
-}
-
+/*os dois*/
 #botaoHome{
     width: 3em; 
     height: 3em;
@@ -91,10 +33,11 @@
 }
 
 body{
-    display: flex;
-    background-image: url("../img/background_deitado.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/background_deitado.png");
+    background-repeat: repeat;
 }
+
+#home{
     border: rgb(189, 56, 118)  2px solid ; 
     background-color: rgb(243, 182, 213) ;
     font-size: 20pt;
@@ -103,6 +46,56 @@ body{
     display: inline; 
     justify-content: flex-end; 
     box-shadow: 0 4px 8px rgb(41, 39, 39) ;
+}
+
+
+
+/*sobre*/
+#tituloSobre{
+    display: center; 
+    text-align: center;
+    width: 22em;
+    height: 6em;
+    display: inline;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    margin-top: 3%;
+    margin-left: 31%;
+    margin-bottom: 1.2%;
+}
+
+#tituloEquipe{
+    display: center; 
+    text-align: center;
+    width: 20em;
+    height: 8em;
+    display: inline;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    margin-top: 3%;
+    margin-left: 1.2%;
+}
+
+#foto{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    width: 10%;
+}
+
+.titulo{
+    display: inline-block;
+}
+
+header h1{
+    display: center ; 
+    text-align: center ;
+    font-size: 55pt;
+    color:rgb(253, 209, 13);
+    font-family: "game"; 
 }
 
 #integrantes{
@@ -134,6 +127,7 @@ a:hover{
                 0  0  25px rgb(253, 249, 7) ;
     text-decoration: none; 
 }
+
 #box{
     backdrop-filter: blur (8px);
     box-shadow: 0 0 30px rgba(255,255,255,0.1);
@@ -154,326 +148,35 @@ a:hover{
 
 
 
+/*como jogar*/
+
+#como{
+    width: 26em;
+    margin-left: 30em;
+    margin-bottom: 2.5em;
 
 }
 
-
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    #tituloSobre{
-        display: center; 
-        text-align: center;
-        width: 26em;
-        height: 6em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        
-    }
-
-
-
-    #tituloEquipe{
-        display: center; 
-        text-align: center;
-        width: 22em;
-        height: 7em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto;
-    }
-
-
-
-    #foto{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 0 auto; 
-    }
-
-    #botaoHome{
-        width: 3em; 
-        height: 3em;
-    } 
-
-    .button{
-        cursor: pointer;
-        border:rgb(219, 156, 188)  2px solid ; 
-        background-color: rgb(243, 182, 213) ;
-        border-radius: 100em ;
-        display: inline; 
-        box-shadow: 0 9px #bdbbbb;
-        padding: 1em;
-        margin-left: 1%;
-        margin-top: 1%;
-    }
-
-    .button:hover{
-        background-color: rgb(243, 182, 213) ;
-    }
-
-    .button:active {
-    background-color:  rgb(197, 139, 168);
-    box-shadow: 0 5px #666;
-    transform: translateY(1em);
-    }
-
-
-
-    header h1{
-        display: center ; 
-        text-align: center ;
-        font-size: 55pt;
-        color:rgb(253, 209, 13);
-        font-family: "game";
-    }
-
-
-    body{
-        background-image: url("../img/background_deitado.jpg");
-        background-repeat: no-repeat;
-    }
-
-
-
-    #home{
-        border: rgb(189, 56, 118)  2px solid ; 
-        background-color: rgb(243, 182, 213) ;
-        font-size: 20pt;
-        text-align: center;
-        border-radius: 50px ;
-        display: inline; 
-        justify-content: flex-end; 
-        box-shadow: 0 4px 8px rgb(41, 39, 39) ;
-    }
-
-    #integrantes{
-        font-size: 28pt;
-        font-family: "game";
-        color: rgb(201, 70, 120); 
-    }
-
-    .integrantes{
-        font-size: 18pt;
-        text-align: justify ;
-        
-        color: rgb(119, 27, 65);
-    }
-
-    a, a:link{
-        text-decoration: none; 
-        color: rgb(250, 206, 12); 
-        font-family: "game";
-    }
-
-    a:hover{
-        text-decoration: underline;
-        color:aliceblue; 
-        font-family: "game";
-        text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
-                    0  0 5px rgb(197, 162, 3) ,
-                    0  0  15px rgb(240, 205, 7), 
-                    0  0  25px rgb(253, 249, 7) ;
-        text-decoration: none; 
-    }
-
-    .tutorial{
-        width: 25em;
-        margin: 4em;
-        box-shadow: 0 0.5em 0.5em 0 grey;
-        border-radius: 3em;
-        display: inline-block;
-    }
-
-    #seta{
-        width: 20em;
-        height: 30em;
-        display: inline-block;
-
-    }
-
-    #box{
-        backdrop-filter: blur (8px);
-        box-shadow: 0 0 30px rgba(255,255,255,0.1);
-        background-color: rgba(255, 255, 255, 0.2) ;
-        margin-top: 4em;
-        padding: 2em; 
-        margin-left: 2em ;
-        margin-right: 2em ;
-        border-radius: 50px;
-    }
-
-    #explicacao{
-        font-size: 18pt;
-        text-align: justify ;
-        font-family: 'Arial';
-        color: rgb(119, 27, 65);
-    }
+#jogar{
+    width: 28em;
+    margin-left: 3em;
 }
 
-
-
-@media screen and (min-width: 1025px){
-        
-    #tituloSobre{
-        display: center; 
-        text-align: center;
-        width: 30em;
-        height: 7em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        
-    }
-
-
-
-    #tituloEquipe{
-        display: center; 
-        text-align: center;
-        width: 25em;
-        height: 8esm;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto;
-    }
-
-    #botaoHome{
-        width: 3em; 
-        height: 3em;
-    } 
-    
-
-    #foto{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 0 auto; 
-    }
-
-    .button{
-        cursor: pointer;
-        border:rgb(219, 156, 188)  2px solid ; 
-        background-color: rgb(243, 182, 213) ;
-        border-radius: 100em ;
-        display: inline; 
-        box-shadow: 0 9px #bdbbbb;
-        padding: 1em;
-        margin-left: 1%;
-        margin-top: 1%;
-    }
-
-    .button:hover{
-        background-color: rgb(243, 182, 213) ;
-    }
-
-    .button:active {
-    background-color:  rgb(197, 139, 168);
-    box-shadow: 0 5px #666;
-    transform: translateY(1em);
-    }
-
-
-
-    header h1{
-        display: center ; 
-        text-align: center ;
-        font-size: 55pt;
-        color:rgb(253, 209, 13);
-        color: red;
-        font-family: "game";
-    }
-
-
-    body{
-        background-image: url("../img/background_deitado.png");
-        background-repeat: repeat;
-    }
-
-
-
-    #home{
-        border: rgb(189, 56, 118)  2px solid ; 
-        background-color: rgb(243, 182, 213) ;
-        font-size: 20pt;
-        text-align: center;
-        border-radius: 50px ;
-        display: inline; 
-        justify-content: flex-end; 
-        box-shadow: 0 4px 8px rgb(41, 39, 39) ;
-    }
-
-    #integrantes{
-        font-size: 28pt;
-        font-family: "game";
-        color: rgb(201, 70, 120); 
-    }
-
-    .integrantes{
-        font-size: 18pt;
-        text-align: justify ;
-        font-family: "game";
-        color: rgb(119, 27, 65);
-    }
-
-    a, a:link{
-        text-decoration: none; 
-        color: rgb(250, 206, 12); 
-        font-family: "game";
-    }
-
-    a:hover{
-        text-decoration: underline;
-        color:aliceblue; 
-        font-family: "game";
-        text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
-                    0  0 5px rgb(197, 162, 3) ,
-                    0  0  15px rgb(240, 205, 7), 
-                    0  0  25px rgb(253, 249, 7) ;
-        text-decoration: none; 
-    }
-
-    .tutorial{
-        width: 25em;
-        margin: 4em;
-        box-shadow: 0 0.5em 0.5em 0 grey;
-        border-radius: 3em;
-        display: inline-block;
-    }
-
-    #seta{
-        width: 20em;
-        height: 30em;
-        display: inline-block;
-
-    }
-
-    #box{
-        backdrop-filter: blur (8px);
-        box-shadow: 0 0 30px rgba(255,255,255,0.1);
-        background-color: rgba(255, 255, 255, 0.2) ;
-        margin-top: 4em;
-        padding: 2em; 
-        margin-left: 2em ;
-        margin-right: 2em ;
-        border-radius: 50px;
-    }
-
-    #explicacao{
-        font-size: 18pt;
-        text-align: justify ;
-        font-family: 'Arial';
-        color: rgb(119, 27, 65);
-    }
+.tutorial{
+    width: 30em;
+    margin: 4em;
+    margin-left: 8.5em;
+    box-shadow: 0 0.5em 0.5em 0 grey;
+    border-radius: 3em;
+    display: inline-block;
+    box-sizing: content-box;
 }
 
-
-
-
-
+#seta{
+    width: 20em;
+    height: 30em;
+    margin-bottom: 8em;
+    margin-left: 6em;
+    display: inline-block;
+    box-sizing: content-box;
+}
