@@ -1,47 +1,7 @@
 
-/*smartfone/celular (home) */ 
-@media screen and (min-width: 301px) and ( max-width: 780px ){
-    #titulo{
-        display: center; 
-        text-align: center;
-        width: 27em;
-        height: 12em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        margin-top: 5%; 
-    }
-
-    .niveis{
-        font-size: 20pt;
-        width: 10em ;
-    }
-
-    #botaocomo{
-    width: 1.9em; 
-    height: 1.7em;
-    } 
-
-    #botaosobre{
-        width: 1.7em; 
-        height: 1.7em;
-    }
-
-    .button1{
-        margin-left: 70%;
-        margin-top: 25%;
-    }
-
-    body{
-    display: flex;
-    background-image: url("../img/background_em_pe.png");
-    background-repeat: no-repeat;
-}
+/*como jogar */ 
 
 @media screen and (max-width: 700px ){
-    /*celular*/
-    /* TELA Como jogar */
     #como{
         width: 35%;
         margin-left: 15%;
@@ -124,10 +84,6 @@
 }
 
 
-
-}
-
-
 @media screen and (min-width: 700px) and (max-width: 1900px ){
 
     #como{
@@ -164,3 +120,168 @@
         /*visibility: hidden;*/
     }
 }
+
+
+
+
+
+/* home */
+
+@media screen and (min-width: 301px) and ( max-width: 780px ){
+    #titulo{
+        display: center; 
+        text-align: center;
+        width: 27em;
+        height: 12em;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+        margin-top: 5%; 
+    }
+
+    .niveis{
+        font-size: 20pt;
+        width: 10em ;
+    }
+
+    #botaosobre{
+        width: 1.7em; 
+        height: 1.7em;
+    }
+
+    .button1{
+        margin-left: 70%;
+        margin-top: 25%;
+    }
+
+    body{
+    display: flex;
+    background-image: url("../img/background_em_pe.png");
+    background-repeat: no-repeat;
+}}
+
+
+
+
+
+
+
+/* sobre a equipe */
+
+@media screen and (max-width: 768px){
+
+    #tituloSobre{
+        width: 40%;
+        height: 40%;
+    }
+
+    #tituloEquipe{
+        width: 38%;
+        height: 38%;
+        margin-left: 30%;
+    }
+
+    #foto{
+        width: 25%;
+    }
+
+
+    body{
+        display: flex;
+    }
+
+    #integrantes{
+        font-size: 15pt;
+         
+    }
+
+    .integrantes{
+        font-size: 15pt;
+        text-align: start;
+    }
+
+    #explicacao{
+        font-size: 15pt;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    #tituloSobre{
+        width: 50%;
+        height: 50%;
+    }
+
+    #tituloEquipe{
+        width: 48%;
+        height: 48%;
+        margin-left: 30%;
+    }
+
+    #foto{
+        width: 25%;
+    }
+
+
+    body{
+        display: flex;
+    }
+
+    #integrantes{
+        font-size: 25pt;
+         
+    }
+
+    .integrantes{
+        font-size: 20pt;
+        text-align: start;
+    }
+
+    #explicacao{
+        font-size: 15pt;
+    }
+}
+
+
+/*
+@media screen and (min-width: 1025px){
+   #tituloSobre{
+        width: 50%;
+        height: 50%;
+    }
+
+    #tituloEquipe{
+        width: 48%;
+        height: 48%;
+        margin-left: 30%;
+    }
+
+    #foto{
+        width: 25%;
+    }
+
+
+    body{
+        display: flex;
+    }
+
+    #integrantes{
+        font-size: 25pt;
+         
+    }
+
+    .integrantes{
+        font-size: 20pt;
+        text-align: start;
+    }
+
+    #explicacao{
+        font-size: 15pt;
+    }
+}
+    */
