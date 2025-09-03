@@ -1,3 +1,11 @@
+@font-face {
+    font-family: game;
+    src: url(../font/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+
+
+
 #titulo{
     display: center; 
     text-align: center;
@@ -85,24 +93,25 @@ nav{
     border: rgb(240, 166, 201)  2px solid ;  
     border-radius: 10px;
     background-color: rgb(172, 10, 77) ;
-    font-size: 40pt;
+    font-size: 25pt;
     text-align: center;
     display: block;
     margin: 1em auto; 
-    width: 25% ;
+    padding: 1%;
+    width: 23% ;
     box-shadow: 0 4px 8px rgb(41, 39, 39) ;
 }
 
 a, a:link{
     text-decoration: none; 
     color: rgb(250, 206, 12); 
-    font-family: 'Verdana';
+    font-family: "game";
 }
 
 a:hover{
     text-decoration: underline;
     color:aliceblue; 
-    font-family: 'Verdana';
+    font-family: "game";
     text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
                 0  0 5px rgb(197, 162, 3) ,
                 0  0  15px rgb(240, 205, 7), 
