@@ -1,5 +1,7 @@
-
-
+@font-face {
+    font-family: game;
+    src: url(../font/Press_Start_2P/PressStart2P-Regular.ttf);
+}
 
 
 @media screen and (max-width: 768px){
@@ -102,7 +104,7 @@ header h1{
     text-align: center ;
     font-size: 55pt;
     color:rgb(253, 209, 13);
-    font-family: 'Verana'; 
+    ffont-family: "game";
 }
 
 
@@ -127,14 +129,14 @@ body{
 
 #integrantes{
     font-size: 28pt;
-    font-family: 'Verdana';
+    font-family: "game";
     color: rgb(201, 70, 120); 
 }
 
 .integrantes{
     font-size: 18pt;
     text-align: justify ;
-    font-family: 'Arial';
+    font-family: "game";
     color: rgb(119, 27, 65);
 }
 
@@ -147,7 +149,7 @@ a, a:link{
 a:hover{
     text-decoration: underline;
     color:aliceblue; 
-    font-family: 'Verdana';
+    font-family: "game";
     text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
                 0  0 5px rgb(197, 162, 3) ,
                 0  0  15px rgb(240, 205, 7), 
@@ -269,13 +271,13 @@ a:hover{
         text-align: center ;
         font-size: 55pt;
         color:rgb(253, 209, 13);
-        font-family: 'Verana'; 
+        font-family: "game";
     }
 
 
     body{
-        background-image: url("../img/background_deitado.png");
-        background-repeat: repeat;
+        background-image: url("../img/background_deitado.jpg");
+        background-repeat: no-repeat;
     }
 
 
@@ -293,27 +295,27 @@ a:hover{
 
     #integrantes{
         font-size: 28pt;
-        font-family: 'Verdana';
+        font-family: "game";
         color: rgb(201, 70, 120); 
     }
 
     .integrantes{
         font-size: 18pt;
         text-align: justify ;
-        font-family: 'Arial';
+        
         color: rgb(119, 27, 65);
     }
 
     a, a:link{
         text-decoration: none; 
         color: rgb(250, 206, 12); 
-        font-family: 'Verdana';
+        font-family: "game";
     }
 
     a:hover{
         text-decoration: underline;
         color:aliceblue; 
-        font-family: 'Verdana';
+        font-family: "game";
         text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
                     0  0 5px rgb(197, 162, 3) ,
                     0  0  15px rgb(240, 205, 7), 
@@ -427,7 +429,7 @@ a:hover{
         font-size: 55pt;
         color:rgb(253, 209, 13);
         color: red;
-        font-family: 'Verana'; 
+        font-family: "game";
     }
 
 
@@ -451,27 +453,27 @@ a:hover{
 
     #integrantes{
         font-size: 28pt;
-        font-family: 'Verdana';
+        font-family: "game";
         color: rgb(201, 70, 120); 
     }
 
     .integrantes{
         font-size: 18pt;
         text-align: justify ;
-        font-family: 'Arial';
+        font-family: "game";
         color: rgb(119, 27, 65);
     }
 
     a, a:link{
         text-decoration: none; 
         color: rgb(250, 206, 12); 
-        font-family: 'Verdana';
+        font-family: "game";
     }
 
     a:hover{
         text-decoration: underline;
         color:aliceblue; 
-        font-family: 'Verdana';
+        font-family: "game";
         text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
                     0  0 5px rgb(197, 162, 3) ,
                     0  0  15px rgb(240, 205, 7), 
