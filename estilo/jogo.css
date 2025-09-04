@@ -94,3 +94,11 @@ body{
   box-shadow: 0 5px #666;
   transform: translateY(1em);
 }
+
+#modal_container{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
