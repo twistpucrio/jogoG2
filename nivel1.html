@@ -43,30 +43,29 @@
     <div id="modal_container">
         <div class="modal" id="regra">
             <p>Faca 100 pontos para passar de nivel</p>
-            <button>ok</button>
+            <button class="botaoModal" id="botao_ok_regra">ok</button>
         </div>
-        <!--<div id="perdeu" hidden>
-            <header id="cab"> 
-                <h1> Voce perdeu!!! </h1>
-            </header>
-            <section id="main">
-                <button class="button"> 
-                    <a href="index.html"> 
-                        <img  id="botaoHome" src="img/home.png" alt="index">
-                    </a> 
-                </button> 
 
-                <button class="button" > 
-                        <a id="botaoDeNovo" href="nivel1.html"> 
-                            <img id="botaoDeNovo" src="img/Gatinho.png" alt="jogarNovamente">
-                        </a>
-                </button>
-            </section>
+        <div id="perdeu" class="modal modal-escondido" >
+        
+            <p> Voce perdeu!!! </p>
+            
+            <div class="modalBtnContainer">
+                <a class="botaoModal" href="index.html"> 
+                    <img src="img/home.png" alt="index">
+                </a> 
+                
+                 
+                <a  class="botaoModal" id="botaoDeNovo" href="nivel1.html"> 
+                    <img src="img/Gatinho.png" alt="jogarNovamente">
+                </a>
+                
+            </div>
         </div> 
 
 
 
-        <div id="ganhou">
+        <div id="ganhou" class="modal modal-escondido" >
             <header id="cab"> 
                 <h1> Voce ganhou!!! </h1>
             </header>
@@ -86,7 +85,6 @@
                 </button>
             </section>
         </div> 
-    -->
     </div>
     
 

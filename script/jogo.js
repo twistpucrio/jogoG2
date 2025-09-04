@@ -24,6 +24,8 @@ let timerInterval;
 
 let proxnivel = document.getElementById("proxNivel");
 let boardElem = document.getElementById("board");
+
+let botaoOkRegra = document.getElementById("botao_ok_regra");
  
 
 let somScore = new Audio("./sound/somScore.mp3");

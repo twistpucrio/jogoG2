@@ -100,5 +100,57 @@ body{
     inset: 0;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.modal{
+    border:rgb(219, 156, 188)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    border-radius: 100em ;
+    box-shadow: 0 9px #bdbbbb;
+    padding: 1em;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: "game";
+}
+
+.botaoModal{
+    border: rgb(240, 166, 201)  2px solid ;  
+    border-radius: 10px;
+    background-color: rgb(172, 10, 77) ;
+    font-size: 25pt;
+    text-align: center;
+    margin: 1em auto; 
+    padding: 1%;
+    width: 23% ;
+    box-shadow: 0 4px 8px rgb(41, 39, 39) ;
+    color: white;
+    font-family: "game";
+    appearance: none;
+    text-decoration: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoModal img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 2em;
+}
+
+.modal-escondido{
+    display: none;
+}
+
+.modalBtnContainer{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
 }
