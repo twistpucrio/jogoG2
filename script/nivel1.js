@@ -8,7 +8,8 @@ function main() {
         botaoOkRegra.addEventListener("click", () => {
 
             document.getElementById("regra").remove();
-            document.getElementById("perdeu").classList.remove("modal-escondido");
+            document.getElementById("modal_container").classList.add("modal-escondido");
+            
             mainInterval = window.setInterval(function () {
 
                 deslizarAnimais();

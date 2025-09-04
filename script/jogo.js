@@ -289,22 +289,15 @@ inicio = Date.now();
 function handleGameOver(n) {
     clearInterval(mainInterval);
     clearInterval(timerInterval);
-    let texto;
+    document.getElementById("regra").classList.remove("modal-escondido");
      if (score>= n){
-        ganhou=true; 
-        texto = "Voce ganhou";
+        ganhou=true;
+        document.getElementById("ganhou").classList.remove("modal-escondido");
     }
     else{
-        ganhou= false; 
-        texto = "Voce perdeu";
+        ganhou =false;
+        document.getElementById("perdeu").classList.remove("modal-escondido");
     }
-    if (confirm( texto + ", proximo nivel?")){
-        proxnivel.click();
-    }
-    else{
-        controle=0;
-        location.reload();
-    }    
 }
 
 

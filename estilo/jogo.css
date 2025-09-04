@@ -102,16 +102,17 @@ body{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    pointer-events: auto;
 }
 
 .modal{
     border:rgb(219, 156, 188)  2px solid ; 
     background-color: rgb(243, 182, 213) ;
-    border-radius: 100em ;
+    border-radius: 1em;
     box-shadow: 0 9px #bdbbbb;
     padding: 1em;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
