@@ -26,6 +26,8 @@ let proxnivel = document.getElementById("proxNivel");
 let boardElem = document.getElementById("board");
  
 
+let somScore = new Audio("./sound/somScore.mp3");
+
 function contabiliza (pontos){
     if (controle == 1 ){
         score += pontos; 
@@ -155,11 +157,13 @@ function matchAnimais(numMatch){
                 }
 
                 if (verificaImagens == true){
+                    somScore.play();
                     for (let i = 0; i<numMatch; i++){
                         animaisMatch[i].src ="./img/Vazio.png";
 
                     }
                     contabiliza(numMatch);
+                    
 
                 }   
     } 
@@ -178,10 +182,12 @@ function matchAnimais(numMatch){
                     }
 
                     if (verificaImagens == true){
+                        somScore.play();
                         for (let i = 0; i<numMatch; i++){
                             animaisMatch[i].src ="./img/Vazio.png";                           
                         }
                     contabiliza(numMatch);
+                    
                 }   
     }  
      }
