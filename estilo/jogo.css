@@ -5,10 +5,11 @@
 
 
 body{
-    display: flex;
+
     background-image: url("../img/background_deitado.jpg");
     background-repeat: no-repeat;
 }
+
 
 #timer{
     font-size: 2em; 
@@ -16,7 +17,7 @@ body{
     padding: 0.03em;
     width: 6em;
     height: 3em;
-    margin-left: 29.5em;
+    margin-left: 35%;
     margin-top: 4em;
     border-radius: 0.1em;
     align-items: center;
@@ -31,7 +32,7 @@ body{
     font-size: 2em; 
     background-color: lightsalmon;
     margin-top: -4.5em;
-    margin-left: 58em;
+    margin-left: 51%;
     width: 14em;
     height: 4.5em;
     border-radius: 0.3em;
@@ -51,10 +52,11 @@ body{
     background-color: bisque;
     border: 5px solid rgb(255, 198, 161);
     border-radius: 10px;
-    margin-left: 44em;
+    margin-left: 35%; 
     margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 #board img {

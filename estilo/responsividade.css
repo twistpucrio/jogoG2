@@ -42,55 +42,13 @@
         /*visibility: hidden;*/
     }
 
-}
-
-@media screen and (min-width: 780px) and ( max-width: 980px ){
-
-    #titulo{
-        display: center; 
-        text-align: center;
-        width: 27em;
-        height: 13em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        margin-top: 5%; 
-    }
-
-    .niveis{
-        font-size: 19pt;
-        width: 8em ;
-    }
-
-  .button1{
-        margin-left: 78%;
-        margin-top: 3%;
-        background-color: brown;
-    }
-
-    #botaocomo{
-    width: 2.3em; 
-    height: 2.3em;
-    } 
-
-    #botaosobre{
-        width: 2.3em; 
-        height: 2.3em;
-    }
-
-
 
 }
+
 
 
 @media screen and (min-width: 700px) and (max-width: 1900px ){
 
-    #como{
-        width: 25%;
-        margin-left: 25%;
-        margin-bottom: 3%;
-    }
 
     #jogar{
         width: 28%;
@@ -122,10 +80,54 @@
 }
 
 
+/*Home*/
+@media screen and (min-width: 780px) and ( max-width: 980px ){
+
+    #titulo{
+        display: center; 
+        text-align: center;
+        width: 40em;
+        height: 20em;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+        margin-top: 5%; 
+        margin-left: 10%;
+    }
+
+    .niveis{
+        font-size: 19pt;
+        width: 8em ;
+    }
+
+  .button1{
+        margin-left: 78%;
+        margin-top: 3%;
+        
+    }
+
+    #botaocomo{
+    width: 2.3em; 
+    height: 2.3em;
+    } 
+
+    #botaosobre{
+        width: 2.3em; 
+        height: 2.3em;
+
+    }
+
+    .button2{
+        margin-bottom: 2%; 
+        margin-left: 0.5%;
+        margin-top: 3%;
+    }
 
 
+}
 
-/* home */
+
 
 @media screen and (min-width: 301px) and ( max-width: 780px ){
     #titulo{
@@ -150,10 +152,28 @@
         height: 1.7em;
     }
 
+    #botaocomo{
+        width: 1.7em; 
+        height: 1.7em;
+    }
+
     .button1{
         margin-left: 70%;
         margin-top: 25%;
     }
+
+    .button1{
+    margin-bottom: 2%;
+    margin-left: 74%;
+    margin-top: 3%;
+}
+
+    .button2{
+        margin-bottom: 2%; 
+        margin-left: 0.5%;
+        margin-top: 3%;
+    }
+
 
     body{
     display: flex;
@@ -247,41 +267,3 @@
     }
 }
 
-
-/*
-@media screen and (min-width: 1025px){
-   #tituloSobre{
-        width: 50%;
-        height: 50%;
-    }
-
-    #tituloEquipe{
-        width: 48%;
-        height: 48%;
-        margin-left: 30%;
-    }
-
-    #foto{
-        width: 25%;
-    }
-
-
-    body{
-        display: flex;
-    }
-
-    #integrantes{
-        font-size: 25pt;
-         
-    }
-
-    .integrantes{
-        font-size: 20pt;
-        text-align: start;
-    }
-
-    #explicacao{
-        font-size: 15pt;
-    }
-}
-    */
