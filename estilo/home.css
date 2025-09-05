@@ -5,9 +5,7 @@
 
 
 
-
 #titulo{
-    display: center; 
     text-align: center;
     width: 45em;
     height: 20em;
@@ -18,18 +16,19 @@
     margin-top: 5%; 
 }
 
-#botaocomo{
+#ftbotaocomo{
     width: 3.5em; 
-    height: 3.5em;
+    height: 3.5em; 
 } 
 
-#botaosobre{
+
+#ftbotaosobre{
     width: 3.6em; 
     height: 3.6em;
 }
 
 
-.button2{
+.button{
     cursor: pointer;
     border:rgb(219, 156, 188)  2px solid ; 
     background-color: rgb(243, 182, 213) ;
@@ -37,45 +36,34 @@
     display: inline; 
     box-shadow: 0 9px #bdbbbb;
     padding: 1em;
-    margin-bottom: 2%; 
-    margin-left: 0.5%;
+    margin-bottom: 3%; 
+    margin-left: 1%;
     margin-top: 3%;
 }
 
-.button2:hover{
+.button:hover{
     background-color: rgb(243, 182, 213) ;
 }
 
-.button2:active {
+.button:active {
   background-color:  rgb(197, 139, 168);
   box-shadow: 0 5px #666;
   transform: translateY(1em);
 }
 
-.button1{
-    cursor: pointer;
-    border:rgb(219, 156, 188)  2px solid ; 
-    background-color: rgb(243, 182, 213) ;
-    border-radius: 100em ;
-    display: inline; 
-    box-shadow: 0 9px #bdbbbb;
-    padding: 1em;
-    margin-bottom: 2%;
-    margin-left: 87%;
+#btn1{
+    
+    margin-left: 85%;
     justify-content: flex-end;
     margin-top: 3%;
+    justify-content: center;
+    align-items: center;
 }
 
-.button1:hover{
-    background-color: rgb(243, 182, 213) ;
+#btn2{
+    margin-left: 1%;
+    margin-top: 3%;
 }
-
-.button1:active {
-  background-color:  rgb(197, 139, 168);
-  box-shadow: 0 5px #666;
-  transform: translateY(1em);
-}
-
 
 
 body{
@@ -119,3 +107,9 @@ a:hover{
     text-decoration: none; 
 }
 
+#main {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    margin: 1rem;
+}

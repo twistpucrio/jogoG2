@@ -24,7 +24,7 @@ function main() {
 
                 if (gameOver) {
                     controle = 3;
-                    handleGameOver(1000);//o parametro é o numero de pontos necessarios para passar de nivel
+                    handleGameOver(600);//o parametro é o numero de pontos necessarios para passar de nivel
                 }
             }, 100);
 
