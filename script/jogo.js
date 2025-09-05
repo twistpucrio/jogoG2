@@ -17,13 +17,16 @@ let restante;
 let inicio; 
 
 let gameOver = false;
-let ganhou = false;
+let ganhou = document.getElementById("ganhou");
+let perdeu = document.getElementById("perdeu");
 
 let mainInterval;
 let timerInterval;
 
 let proxnivel = document.getElementById("proxNivel");
 let boardElem = document.getElementById("board");
+let modalPause = document.getElementById("pause");
+let modalContainer = document.getElementById("modal_container");
 
 let botaoOkRegra = document.getElementById("botao_ok_regra");
  
@@ -250,79 +253,60 @@ function gerarAnimais(){
     }
 
 }
-// no inicio do jogo ->   quando voltar do pause -> atualizarTimer(restante);
 
-inicio = Date.now();   
-//CHAMAR NO CASO 1 O inicio = date.now()  
 
-    function atualizarTimer(duracao) {
-        let agora = Date.now();
-        let decorrido = Math.floor((agora - inicio) / 1000);
-        restante = duracao - decorrido;
-        let relogio = document.getElementById("timer");
-        let min, seg;
-        let segundo;
-        let minuto;
+function atualizarTimer() {
+    restante -= 1;//diminui 1 da duracao
+    let relogio = document.getElementById("timer");
+    let min, seg;
+    let segundo;
+    let minuto;
 
-        console.log(restante)
-
-        if (restante <= 0) {
-            console.log("Acabou")
-            relogio.innerHTML= "⏰";
-            gameOver = true;
-            return; 
-        }
-
-        min = Math.floor((restante / 60));
-        minuto = min < 10 ? `0${min}` : min;
-        seg = restante % 60;
-        segundo = seg < 10 ? `0${seg}` : seg;
-
-        // Atualizar timer na tela
-        relogio.innerHTML= `<p>${minuto}:${segundo} </p>`;
+    if (restante <= 0) {//quando o timer chegar a 0
+        relogio.innerHTML= "⏰";//texto do timer
+        gameOver = true;//seta o gameOver com true para iniciar na main a funcao gameOver
+        return; 
     }
-    
 
-//parte de Score/Game Over (nao tem muita coisa feita-se precisar pode apagar a partir daqui!)       
+    min = Math.floor((restante / 60));//divide os minutos
+    minuto = min < 10 ? `0${min}` : min;//caso seja menor que 10 coloca-se um 0 na frente. caso contrario mantem o numero original
+    seg = restante % 60;
+    segundo = seg < 10 ? `0${seg}` : seg;//mesma logica do minuto
+
+    // Atualizar timer na tela
+    relogio.innerHTML= `<p>${minuto}:${segundo} </p>`;
+}
+    
 
 
 function handleGameOver(n) {
-    clearInterval(mainInterval);
-    clearInterval(timerInterval);
-    document.getElementById("regra").classList.remove("modal-escondido");
-     if (score>= n){
-        ganhou=true;
-        document.getElementById("ganhou").classList.remove("modal-escondido");
+    clearInterval(mainInterval);//mata o mainInterval
+    clearInterval(timerInterval);//mata o timerInterval
+    modalContainer.style.zIndex = 1;//mostra o modal container
+    if (score>= n){//se o score for maior ou igual ao desejado, mostra-se o modal do ganhar
+        ganhou.classList.remove("modal-escondido");
     }
-    else{
-        ganhou =false;
-        document.getElementById("perdeu").classList.remove("modal-escondido");
+    else{//caso contrario, mostra-se o modal do perder
+        perdeu.classList.remove("modal-escondido");
     }
 }
 
-
-/*function btnPause(){
-        controle=2;  
-        let conf = confirm("deseja voltar jogar???");
-        if (conf == true){
-            controle=1; 
-        }
-        else{
-           gameOver = true;
-        }
-}*/
-
 function btnPause(){
-    boardElem.style.visibility = 'hidden';
-    setTimeout(() => {
-        controle =2;
-        let agora = Date.now();
-        alert("Jogo pausado "); 
-        let decorrido = Date.now() - agora;
-        inicio += decorrido;
-        boardElem.style.visibility = 'visible';
+    modalPause.classList.remove("modal-escondido");//para aparecer o modal do pause
+    modalContainer.style.zIndex = 1;//aparecer o modal_container
+    boardElem.style.visibility = 'hidden';//board do jogo fica escondido
+    clearInterval(timerInterval);//matar o setInterval (que diminui 1 segundo)
+    controle =2;
+
+    btnResume.addEventListener("click", () => { //quando clicar no botao resume
+        timerInterval = setInterval(() => { //reinicializa o setinterval, resumindo o tempo
+            atualizarTimer()
+        }, 1000);
+        boardElem.style.visibility = 'visible'; //board do jogo reaparece
+        modalPause.classList.add("modal-escondido");//esconde o modal do pause
+        modalContainer.style.zIndex = -1;//esconde o modal container botando ele pra tras em relacao aos outros elementos
         controle = 1;
-    }, 0);// setTimout para renderizar o css    
+    });  
 }
 
 

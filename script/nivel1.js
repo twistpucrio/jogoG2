@@ -5,10 +5,11 @@ function main() {
 
     window.addEventListener('load', function () {
         comecarJogo();
-        botaoOkRegra.addEventListener("click", () => {
-
-            document.getElementById("regra").remove();
-            document.getElementById("modal_container").classList.add("modal-escondido");
+        boardElem.style.visibility = 'hidden';//esconde o board do jogo
+        botaoOkRegra.addEventListener("click", () => {//quando clicar no botao de ok
+            boardElem.style.visibility = 'visible';//mostra o board do jogo
+            document.getElementById("regra").remove();//remove o modal da regra
+            document.getElementById("modal_container").style.zIndex = -1;//coloca o modal container pra tras em relacao ao resto
             
             mainInterval = window.setInterval(function () {
 
@@ -23,15 +24,16 @@ function main() {
 
                 if (gameOver) {
                     controle = 3;
-                    handleGameOver(100);
+                    handleGameOver(400);//o parametro é o numero de pontos necessarios para passar de nivel
                 }
             }, 100);
-            timerInterval = setInterval(() => {
-                atualizarTimer(duracao)
+
+            restante = duracao;
+            timerInterval = setInterval(() => {//para rodar a funcao a cada 1 segundo
+                atualizarTimer()
 
             }, 1000);
         });
-
 
     })
 

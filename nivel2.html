@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,26 @@
     <link rel="stylesheet" href="estilo/jogo.css">
 
 </head>
+
 <body>
 
     <div id="container">
-        <button class="button"> 
-            <a href="index.html"> 
-                <img  id="botaoHome" src="img/home.png" alt="index">
-            </a> 
-        </button> 
+        <button class="button">
+            <a href="index.html">
+                <img id="botaoHome" src="img/home.png" alt="index">
+            </a>
+        </button>
 
-         <button onclick="btnPause()"   class="button">  
-                <img  id="botaoPause" src="img/Coelhinho.png" alt="index"> 
-        </button> 
+        <button onclick="btnPause()" class="button">
+            <img id="botaoPause" src="img/Coelhinho.png" alt="index">
+        </button>
 
         <header id="cab"></header>
 
         <section id="main">
             <div id="timer"></div>
 
-            <div class="score"> 
+            <div class="score">
                 <span id="labelScore"> Score: </span><span id="score"></span>
             </div>
 
@@ -35,10 +37,74 @@
             </div>
         </section>
 
+        <div id="modal_container">
+            <!-- regra inicial -->
+            <div class="modal" id="regra">
+                <p>Faça 1000 pontos para passar de nivel</p>
+                <button class="botaoModal" id="botao_ok_regra">ok</button><!-- botao de ok -->
+            </div>
+
+            <!-- perdeu -->
+            <div id="perdeu" class="modal modal-escondido">
+
+                <p> Você perdeu!!! </p>
+
+                <div class="modalBtnContainer">
+                    <a class="botaoModal" href="index.html"><!-- botao do home  -->
+                        <img src="img/home.png" alt="index">
+                    </a>
+
+
+                    <a class="botaoModal" id="botaoDeNovo" href="nivel2.html"><!--botao jogar novamente  -->
+                        <img src="img/Gatinho.png" alt="jogarNovamente">
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- ganhou -->
+            <div id="ganhou" class="modal modal-escondido">
+                <p> Você ganhou!!! </p>
+
+                <div class="modalBtnContainer">
+
+
+                    <a class="botaoModal" href="nivel2.html">
+                        <img id="botaoProximo" src="img/Pintinho.png" alt="jogarprox"> <!-- botao prox nivel -->
+                    </a>
+
+
+
+                    <a class="botaoModal" id="botaoDeNovo2" href="nivel1.html">
+                        <img id="botaoDeNovo" src="img/Gatinho.png" alt="jogarNovamente"> <!-- botao jogar novamente -->
+                    </a>
+
+                </div>
+            </div>
+
+            <!--pause-->
+            <div id="pause" class="modal modal-escondido">
+                <p>Jogo pausado</p>
+
+                <div class="modalBtnContainer">
+                    <a class="botaoModal" href="index.html">
+                        <img src="img/home.png" alt="index"><!-- botao do home -->
+                    </a>
+
+
+                    <button id="btnResume"> <!--botao de resumir jogo-->
+
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
         <footer id="rod"></footer>
 
-    <a id="proxNivel" href="nivel2.html" hidden>prox nivel</a>
-    <script src="script/jogo.js"></script>
-    <script src="script/nivel2.js"></script>
+        <script src="script/jogo.js"></script>
+        <script src="script/nivel2.js"></script>
 </body>
+
 </html>
