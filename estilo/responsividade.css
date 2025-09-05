@@ -31,7 +31,7 @@
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 20%;
-        /*visibility: hidden;*/
+        visibility: hidden;
     }
 
 
@@ -41,6 +41,11 @@
 
 @media screen and (min-width: 700px) and (max-width: 1900px ){
 
+    #como {
+        width: 29%;
+        margin-left: 15%;
+        margin-bottom: 2%;
+    }
 
     #jogar{
         width: 28%;
@@ -75,13 +80,12 @@
 
 
 /*Home*/
-
 @media screen and (min-width: 301px) and ( max-width: 780px ){
     #titulo{
         display: center; 
         text-align: center;
-        width: 27em;
-        height: 12em;
+        width: 50%;
+        height: 30%;
         display: flex;
         justify-content: center; 
         align-items: center; 
@@ -92,6 +96,42 @@
     .niveis{
         font-size: 20pt;
         width: 10em ;
+    }
+
+
+    #ftbotaocomo{
+    width: 1.9em; 
+    height: 1.7em;
+    } 
+
+    #ftbotaosobre{
+        width: 1.7em; 
+        height: 1.7em;
+    }
+
+    .button1{
+        margin-left: 60%;
+        margin-top: 25%;
+    }
+
+}
+
+@media screen and (min-width: 780px) and ( max-width: 1300px ){
+    #titulo{
+        display: center; 
+        text-align: center;
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+        margin-top: 5%; 
+    }
+
+    .niveis{
+        font-size: 20pt;
+        width: 10em;
     }
 
     #ftbotaocomo{
@@ -109,147 +149,7 @@
         margin-top: 25%;
     }
 
-    }
-
-@media screen and (max-width: 700px ){
-    /*celular*/
-    /* TELA Como jogar */
-    #como{
-        width: 35%;
-        margin-left: 15%;
-        margin-bottom: 3%;
-    }
-
-    #jogar{
-        width: 35%;
-        margin-left: 4%;
-    }
-
-    #ftbotaosobre{
-        width: 1.8em; 
-        height: 1.8em;
-    }     
-
-    #ftbotaocomo{
-        width: 1.8em; 
-        height: 1.8em;
-    }    
-
-    .tutorial{
-        width: 30%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .tutorial{
-    width: 12em;
-    margin-left: 1em;
-    display: inline-block;
-    }
-
-
-    #seta{ 
-        display: inline-block; 
-        width: 13%;
-        height: 13%;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 20%;
-
-        /*visibility: hidden;*/
-    }
 }
-
-
-@media screen and (min-width: 780px) and ( max-width: 980px ){
-
-    #titulo{
-        display: center; 
-        text-align: center;
-        width: 40em;
-        height: 20em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        margin-top: 5%; 
-        margin-left: 10%;
-    }
-
-    .niveis{
-        font-size: 19pt;
-        width: 8em ;
-    }
-
-  .button1{
-        margin-left: 78%;
-        margin-top: 3%;
-        
-    }
-
-    #botaocomo{
-    width: 2.3em; 
-    height: 2.3em;
-    } 
-
-    #botaosobre{
-        width: 2.3em; 
-        height: 2.3em;
-    
-    }
-
-    .button2{
-        margin-bottom: 2%; 
-        margin-left: 0.5%;
-        margin-top: 3%;
-    }
- 
-}
-
-
-
-@media screen and (min-width: 981px) and (max-width: 1900px) {
-
-    #como {
-        width: 25%;
-        margin-left: 25%;
-        margin-bottom: 3%;
-    }
-
-    #jogar {
-        width: 28%;
-        margin-left: 4%;
-    }
-
-    #ftbotaohome {
-        width: 3em;
-        height: 3em;
-    }
-
-    .tutorial {
-        width: 25%;
-        margin-left: 7%;
-        margin-right: 7%;
-    }
-
-
-    #seta {
-        display: inline-block;
-        width: 13%;
-        height: 13%;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 20%;
-    }
-}
-
-    .button2{
-            margin-bottom: 2%; 
-            margin-left: 0.5%;
-            margin-top: 3%;
-        }
-  
-
 
 
 
@@ -338,3 +238,16 @@
     }
 }
 
+
+/*jogo*/
+@media screen and (max-width: 1000px) {
+    .score{
+        margin-left: 87%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .score{
+        margin-left: 54%;
+    }
+}
