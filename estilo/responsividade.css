@@ -12,7 +12,7 @@
         margin-left: 4%;
     }
 
-    #botaoHome {
+    #ftbotaohome{
         width: 1.8em;
         height: 1.8em;
     }
@@ -47,7 +47,7 @@
         margin-left: 4%;
     }
 
-    #botaoHome{
+    #ftbotaohome{
         width: 3em; 
         height: 3em;
     }     
@@ -72,7 +72,95 @@
 }
 
 
+
+
 /*Home*/
+
+@media screen and (min-width: 301px) and ( max-width: 780px ){
+    #titulo{
+        display: center; 
+        text-align: center;
+        width: 27em;
+        height: 12em;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+        margin-top: 5%; 
+    }
+
+    .niveis{
+        font-size: 20pt;
+        width: 10em ;
+    }
+
+    #ftbotaocomo{
+    width: 1.9em; 
+    height: 1.7em;
+    } 
+
+    #ftbotaosobre{
+        width: 1.7em; 
+        height: 1.7em;
+    }
+
+    .button1{
+        margin-left: 70%;
+        margin-top: 25%;
+    }
+
+    }
+
+@media screen and (max-width: 700px ){
+    /*celular*/
+    /* TELA Como jogar */
+    #como{
+        width: 35%;
+        margin-left: 15%;
+        margin-bottom: 3%;
+    }
+
+    #jogar{
+        width: 35%;
+        margin-left: 4%;
+    }
+
+    #ftbotaosobre{
+        width: 1.8em; 
+        height: 1.8em;
+    }     
+
+    #ftbotaocomo{
+        width: 1.8em; 
+        height: 1.8em;
+    }    
+
+    .tutorial{
+        width: 30%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .tutorial{
+    width: 12em;
+    margin-left: 1em;
+    display: inline-block;
+    }
+
+
+    #seta{ 
+        display: inline-block; 
+        width: 13%;
+        height: 13%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+
+        /*visibility: hidden;*/
+    }
+}
+
+
 @media screen and (min-width: 780px) and ( max-width: 980px ){
 
     #titulo{
@@ -107,7 +195,7 @@
     #botaosobre{
         width: 2.3em; 
         height: 2.3em;
-
+    
     }
 
     .button2{
@@ -115,15 +203,12 @@
         margin-left: 0.5%;
         margin-top: 3%;
     }
-
-
+ 
 }
 
 
 
-
-
-@media screen and (min-width: 700px) and (max-width: 1900px) {
+@media screen and (min-width: 981px) and (max-width: 1900px) {
 
     #como {
         width: 25%;
@@ -136,7 +221,7 @@
         margin-left: 4%;
     }
 
-    #botaoHome {
+    #ftbotaohome {
         width: 3em;
         height: 3em;
     }
@@ -158,95 +243,12 @@
     }
 }
 
-
-
-@media screen and (min-width: 301px) and (max-width: 780px) {
-    #titulo {
-        display: center;
-        text-align: center;
-        width: 60%;
-        height: 40%;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 5%;
-        display: center; 
-        visibility: hidden
-    }
-
-    }
-
-    .niveis {
-        font-size: 20pt;
-        width: 10rem;
-    }
-
-    #ftbotaosobre {
-        width: 2em;
-        height: 2em;
-    }
-
-
-    #botaocomo{
-        width: 1.7em; 
-        height: 1.7em;
-    }
-
-
-    .button1{
-    margin-bottom: 2%;
-    margin-left: 74%;
-    margin-top: 3%;
-  }
-
     .button2{
-        margin-bottom: 2%; 
-        margin-left: 0.5%;
-        margin-top: 3%;
-    }
-
-
-    body{
-    display: flex;
-    background-image: url("../img/background_em_pe.png");
-    background-repeat: no-repeat;
-}}
-
-@media screen and (min-width: 780px) and (max-width: 1200px) {
-
-    #titulo {
-        display: center;
-        text-align: center;
-        width: 50%;
-        height: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-
-    .niveis {
-        font-size: 19pt;
-        width: 8em;
-    }
-
-    .button1 {
-        margin-left: 78%;
-        margin-top: 3%;
-        background-color: brown;
-    }
-
-    #botaocomo {
-        width: 2.3em;
-        height: 2.3em;
-    }
-
-    #botaosobre {
-        width: 2.3em;
-        height: 2.3em;
-    }
-}
+            margin-bottom: 2%; 
+            margin-left: 0.5%;
+            margin-top: 3%;
+        }
+  
 
 
 

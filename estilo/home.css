@@ -3,9 +3,15 @@
     src: url(../font/Press_Start_2P/PressStart2P-Regular.ttf);
 }
 
+body{
+
+    background-image: url("../img/background_deitado.jpg");
+    background-repeat: no-repeat;
+}
 
 
 #titulo{
+    display: center; 
     text-align: center;
     width: 45em;
     height: 20em;
@@ -28,7 +34,7 @@
 }
 
 
-.button{
+.button2{
     cursor: pointer;
     border:rgb(219, 156, 188)  2px solid ; 
     background-color: rgb(243, 182, 213) ;
@@ -36,20 +42,21 @@
     display: inline; 
     box-shadow: 0 9px #bdbbbb;
     padding: 1em;
-    margin-bottom: 3%; 
-    margin-left: 1%;
+    margin-bottom: 2%; 
+    margin-left: 0.5%;
     margin-top: 3%;
 }
 
-.button:hover{
+.button2:hover{
     background-color: rgb(243, 182, 213) ;
 }
 
-.button:active {
+.button2:active {
   background-color:  rgb(197, 139, 168);
   box-shadow: 0 5px #666;
   transform: translateY(1em);
 }
+
 
 .button1{
     cursor: pointer;
@@ -60,26 +67,19 @@
     box-shadow: 0 9px #bdbbbb;
     padding: 1em;
     margin-bottom: 2%;
-    margin-left: 86%;
-
-#btn1{
-    margin-left: 85%;
+    margin-left: 87%;
     justify-content: flex-end;
     margin-top: 3%;
-    justify-content: center;
-    align-items: center;
 }
 
-#btn2{
-    margin-left: 1%;
-    margin-top: 3%;
+.button1:hover{
+    background-color: rgb(243, 182, 213) ;
 }
 
-
-body{
-
-    background-image: url("../img/background_deitado.jpg");
-    background-repeat: no-repeat;
+.button1:active {
+  background-color:  rgb(197, 139, 168);
+  box-shadow: 0 5px #666;
+  transform: translateY(1em);
 }
 
 
@@ -117,9 +117,9 @@ a:hover{
     text-decoration: none; 
 }
 
-#main {
+/* #main {
     display: flex;
     justify-content:end;
     align-items: center;
     margin: 1rem;
-}
+} */ 
