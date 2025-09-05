@@ -5,10 +5,11 @@
 
 
 body{
-    display: flex;
+
     background-image: url("../img/background_deitado.jpg");
     background-repeat: no-repeat;
 }
+
 
 #timer{
     font-size: 2em; 
@@ -16,7 +17,7 @@ body{
     padding: 0.03em;
     width: 6em;
     height: 3em;
-    margin-left: 29.5em;
+    margin-left: 35%;
     margin-top: 4em;
     border-radius: 0.1em;
     align-items: center;
@@ -31,7 +32,7 @@ body{
     font-size: 2em; 
     background-color: lightsalmon;
     margin-top: -4.5em;
-    margin-left: 58em;
+    margin-left: 51%;
     width: 14em;
     height: 4.5em;
     border-radius: 0.3em;
@@ -51,10 +52,11 @@ body{
     background-color: bisque;
     border: 5px solid rgb(255, 198, 161);
     border-radius: 10px;
-    margin-left: 44em;
+    margin-left: 35%; 
     margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 #board img {
@@ -93,4 +95,94 @@ body{
   background-color:  rgb(197, 139, 168);
   box-shadow: 0 5px #666;
   transform: translateY(1em);
+}
+
+#modal_container{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /*pointer-events: auto;*/
+}
+
+.modal{
+    
+    border:rgb(219, 156, 188)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    border-radius: 1em;
+    box-shadow: 0 9px #bdbbbb;
+    padding: 1em;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: "game";
+}
+
+.botaoModal{
+    border: rgb(240, 166, 201)  2px solid ;  
+    border-radius: 10px;
+    background-color: rgb(172, 10, 77) ;
+    font-size: 25pt;
+    text-align: center;
+    margin: 1em auto; 
+    padding: 1%;
+    width: 23% ;
+    /*box-shadow: 0 4px 8px rgb(41, 39, 39) ;*/
+    color: white;
+    font-family: "game";
+    appearance: none;
+    text-decoration: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoModal:active{
+  background-color:  rgb(132, 6, 59);
+  box-shadow: 0 5px #666;
+  transform: translateY(1em);
+}
+
+.botaoModal img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 2em;
+}
+
+.modal-escondido{
+    display: none;
+}
+
+.modalBtnContainer{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.botaoDeNovo{
+    width:50% 
+}
+
+a, a:link{
+    text-decoration: none; 
+    color: rgb(250, 206, 12); 
+    font-family: "game";
+}
+
+a:hover{
+    text-decoration: underline;
+    color:aliceblue; 
+    font-family: "game";
+    text-shadow: 1px 1px 1px rgb(116, 99, 4) ,
+                0  0 5px rgb(197, 162, 3) ,
+                0  0  15px rgb(240, 205, 7), 
+                0  0  25px rgb(253, 249, 7) ;
+    text-decoration: none; 
 }

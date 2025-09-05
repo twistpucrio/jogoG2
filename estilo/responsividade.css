@@ -1,103 +1,53 @@
+/*como jogar */
 
-/*como jogar */ 
-
-@media screen and (max-width: 700px ){
-    #como{
+@media screen and (max-width: 700px) {
+    #como {
         width: 35%;
         margin-left: 15%;
         margin-bottom: 3%;
     }
 
-    #jogar{
+    #jogar {
         width: 35%;
         margin-left: 4%;
     }
 
-    #botaoHome{
-        width: 1.8em; 
+    #ftbotaohome{
+        width: 1.8em;
         height: 1.8em;
-    }     
+    }
 
-    .tutorial{
+    .tutorial {
         width: 30%;
         margin-left: 5%;
         margin-right: 5%;
     }
 
-    .tutorial{
-    width: 12em;
-    margin-left: 1em;
-    display: inline-block;
-    }
 
-
-    #seta{ 
-        display: inline-block; 
+    #seta {
+        display: inline-block;
         width: 13%;
         height: 13%;
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 20%;
-
         /*visibility: hidden;*/
     }
 
-}
-
-@media screen and (min-width: 780px) and ( max-width: 980px ){
-
-    #titulo{
-        display: center; 
-        text-align: center;
-        width: 27em;
-        height: 13em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        margin-top: 5%; 
-    }
-
-    .niveis{
-        font-size: 19pt;
-        width: 8em ;
-    }
-
-  .button1{
-        margin-left: 78%;
-        margin-top: 3%;
-        background-color: brown;
-    }
-
-    #botaocomo{
-    width: 2.3em; 
-    height: 2.3em;
-    } 
-
-    #botaosobre{
-        width: 2.3em; 
-        height: 2.3em;
-    }
-
-
 
 }
+
 
 
 @media screen and (min-width: 700px) and (max-width: 1900px ){
 
-    #como{
-        width: 25%;
-        margin-left: 25%;
-        margin-bottom: 3%;
-    }
 
     #jogar{
         width: 28%;
         margin-left: 4%;
     }
 
-    #botaoHome{
+    #ftbotaohome{
         width: 3em; 
         height: 3em;
     }     
@@ -124,8 +74,7 @@
 
 
 
-
-/* home */
+/*Home*/
 
 @media screen and (min-width: 301px) and ( max-width: 780px ){
     #titulo{
@@ -145,7 +94,12 @@
         width: 10em ;
     }
 
-    #botaosobre{
+    #ftbotaocomo{
+    width: 1.9em; 
+    height: 1.7em;
+    } 
+
+    #ftbotaosobre{
         width: 1.7em; 
         height: 1.7em;
     }
@@ -155,133 +109,232 @@
         margin-top: 25%;
     }
 
-    body{
-    display: flex;
-    background-image: url("../img/background_em_pe.png");
-    background-repeat: no-repeat;
-}}
+    }
+
+@media screen and (max-width: 700px ){
+    /*celular*/
+    /* TELA Como jogar */
+    #como{
+        width: 35%;
+        margin-left: 15%;
+        margin-bottom: 3%;
+    }
+
+    #jogar{
+        width: 35%;
+        margin-left: 4%;
+    }
+
+    #ftbotaosobre{
+        width: 1.8em; 
+        height: 1.8em;
+    }     
+
+    #ftbotaocomo{
+        width: 1.8em; 
+        height: 1.8em;
+    }    
+
+    .tutorial{
+        width: 30%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .tutorial{
+    width: 12em;
+    margin-left: 1em;
+    display: inline-block;
+    }
+
+
+    #seta{ 
+        display: inline-block; 
+        width: 13%;
+        height: 13%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+
+        /*visibility: hidden;*/
+    }
+}
+
+
+@media screen and (min-width: 780px) and ( max-width: 980px ){
+
+    #titulo{
+        display: center; 
+        text-align: center;
+        width: 40em;
+        height: 20em;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0 auto; 
+        margin-top: 5%; 
+        margin-left: 10%;
+    }
+
+    .niveis{
+        font-size: 19pt;
+        width: 8em ;
+    }
+
+  .button1{
+        margin-left: 78%;
+        margin-top: 3%;
+        
+    }
+
+    #botaocomo{
+    width: 2.3em; 
+    height: 2.3em;
+    } 
+
+    #botaosobre{
+        width: 2.3em; 
+        height: 2.3em;
+    
+    }
+
+    .button2{
+        margin-bottom: 2%; 
+        margin-left: 0.5%;
+        margin-top: 3%;
+    }
+ 
+}
 
 
 
+@media screen and (min-width: 981px) and (max-width: 1900px) {
+
+    #como {
+        width: 25%;
+        margin-left: 25%;
+        margin-bottom: 3%;
+    }
+
+    #jogar {
+        width: 28%;
+        margin-left: 4%;
+    }
+
+    #ftbotaohome {
+        width: 3em;
+        height: 3em;
+    }
+
+    .tutorial {
+        width: 25%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+
+    #seta {
+        display: inline-block;
+        width: 13%;
+        height: 13%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+    }
+}
+
+    .button2{
+            margin-bottom: 2%; 
+            margin-left: 0.5%;
+            margin-top: 3%;
+        }
+  
 
 
 
 
 /* sobre a equipe */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    #tituloSobre{
+    #tituloSobre {
         width: 40%;
         height: 40%;
     }
 
-    #tituloEquipe{
+    #tituloEquipe {
         width: 38%;
         height: 38%;
         margin-left: 30%;
     }
 
-    #foto{
+    #foto {
         width: 25%;
     }
 
 
-    body{
+    body {
         display: flex;
     }
 
-    #integrantes{
+    #integrantes {
         font-size: 15pt;
-         
+
     }
 
-    .integrantes{
+    .integrantes {
         font-size: 15pt;
         text-align: start;
     }
 
-    #explicacao{
+    #explicacao {
+        font-size: 15pt;
+    }
+
+    .texto{
         font-size: 15pt;
     }
 
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
-    #tituloSobre{
+    #tituloSobre {
         width: 50%;
         height: 50%;
     }
 
-    #tituloEquipe{
+    #tituloEquipe {
         width: 48%;
         height: 48%;
         margin-left: 30%;
     }
 
-    #foto{
+    #foto {
         width: 25%;
     }
 
 
-    body{
+    body {
         display: flex;
     }
 
-    #integrantes{
+    #integrantes {
         font-size: 25pt;
-         
+
     }
 
-    .integrantes{
+    .integrantes {
         font-size: 20pt;
         text-align: start;
     }
 
-    #explicacao{
+    #explicacao {
+        font-size: 15pt;
+    }
+
+    .texto{
         font-size: 15pt;
     }
 }
 
-
-/*
-@media screen and (min-width: 1025px){
-   #tituloSobre{
-        width: 50%;
-        height: 50%;
-    }
-
-    #tituloEquipe{
-        width: 48%;
-        height: 48%;
-        margin-left: 30%;
-    }
-
-    #foto{
-        width: 25%;
-    }
-
-
-    body{
-        display: flex;
-    }
-
-    #integrantes{
-        font-size: 25pt;
-         
-    }
-
-    .integrantes{
-        font-size: 20pt;
-        text-align: start;
-    }
-
-    #explicacao{
-        font-size: 15pt;
-    }
-}
-    */
