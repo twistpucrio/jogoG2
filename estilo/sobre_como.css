@@ -78,12 +78,18 @@ body{
     margin-left: 1.2%;
 }
 
-#foto{
-    display: flex;
+.ft_pessoal{
     justify-content: center; 
     align-items: center; 
     margin: 0 auto; 
     width: 10%;
+    border: lightsalmon solid;
+}
+
+.texto{
+    font-size: 20pt;
+    font-family: 'Arial';
+    color: rgb(119, 27, 65);
 }
 
 .titulo{
@@ -140,10 +146,11 @@ a:hover{
 }
 
 #explicacao{
-    font-size: 18pt;
+    font-size: 20pt;
     text-align: justify ;
     font-family: 'Arial';
     color: rgb(119, 27, 65);
+    
 }
 
 

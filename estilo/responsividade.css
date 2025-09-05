@@ -1,44 +1,36 @@
+/*como jogar */
 
-/*como jogar */ 
-
-@media screen and (max-width: 700px ){
-    #como{
+@media screen and (max-width: 700px) {
+    #como {
         width: 35%;
         margin-left: 15%;
         margin-bottom: 3%;
     }
 
-    #jogar{
+    #jogar {
         width: 35%;
         margin-left: 4%;
     }
 
-    #botaoHome{
-        width: 1.8em; 
+    #botaoHome {
+        width: 1.8em;
         height: 1.8em;
-    }     
+    }
 
-    .tutorial{
+    .tutorial {
         width: 30%;
         margin-left: 5%;
         margin-right: 5%;
     }
 
-    .tutorial{
-    width: 12em;
-    margin-left: 1em;
-    display: inline-block;
-    }
 
-
-    #seta{ 
-        display: inline-block; 
+    #seta {
+        display: inline-block;
         width: 13%;
         height: 13%;
         margin-left: 2%;
         margin-right: 2%;
         margin-top: 20%;
-
         /*visibility: hidden;*/
     }
 
@@ -129,44 +121,83 @@
 
 
 
-@media screen and (min-width: 301px) and ( max-width: 780px ){
-    #titulo{
-        display: center; 
+
+
+@media screen and (min-width: 700px) and (max-width: 1900px) {
+
+    #como {
+        width: 25%;
+        margin-left: 25%;
+        margin-bottom: 3%;
+    }
+
+    #jogar {
+        width: 28%;
+        margin-left: 4%;
+    }
+
+    #botaoHome {
+        width: 3em;
+        height: 3em;
+    }
+
+    .tutorial {
+        width: 25%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+
+    #seta {
+        display: inline-block;
+        width: 13%;
+        height: 13%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 20%;
+    }
+}
+
+
+
+@media screen and (min-width: 301px) and (max-width: 780px) {
+    #titulo {
+        display: center;
         text-align: center;
-        width: 27em;
-        height: 12em;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        margin: 0 auto; 
-        margin-top: 5%; 
+        width: 60%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 5%;
+        display: center; 
+        visibility: hidden
     }
 
-    .niveis{
+    }
+
+    .niveis {
         font-size: 20pt;
-        width: 10em ;
+        width: 10rem;
     }
 
-    #botaosobre{
-        width: 1.7em; 
-        height: 1.7em;
+    #ftbotaosobre {
+        width: 2em;
+        height: 2em;
     }
+
 
     #botaocomo{
         width: 1.7em; 
         height: 1.7em;
     }
 
-    .button1{
-        margin-left: 70%;
-        margin-top: 25%;
-    }
 
     .button1{
     margin-bottom: 2%;
     margin-left: 74%;
     margin-top: 3%;
-}
+  }
 
     .button2{
         margin-bottom: 2%; 
@@ -181,88 +212,126 @@
     background-repeat: no-repeat;
 }}
 
+@media screen and (min-width: 780px) and (max-width: 1200px) {
 
+    #titulo {
+        display: center;
+        text-align: center;
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
 
+    .niveis {
+        font-size: 19pt;
+        width: 8em;
+    }
+
+    .button1 {
+        margin-left: 78%;
+        margin-top: 3%;
+        background-color: brown;
+    }
+
+    #botaocomo {
+        width: 2.3em;
+        height: 2.3em;
+    }
+
+    #botaosobre {
+        width: 2.3em;
+        height: 2.3em;
+    }
+}
 
 
 
 
 /* sobre a equipe */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    #tituloSobre{
+    #tituloSobre {
         width: 40%;
         height: 40%;
     }
 
-    #tituloEquipe{
+    #tituloEquipe {
         width: 38%;
         height: 38%;
         margin-left: 30%;
     }
 
-    #foto{
+    #foto {
         width: 25%;
     }
 
 
-    body{
+    body {
         display: flex;
     }
 
-    #integrantes{
+    #integrantes {
         font-size: 15pt;
-         
+
     }
 
-    .integrantes{
+    .integrantes {
         font-size: 15pt;
         text-align: start;
     }
 
-    #explicacao{
+    #explicacao {
+        font-size: 15pt;
+    }
+
+    .texto{
         font-size: 15pt;
     }
 
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
-    #tituloSobre{
+    #tituloSobre {
         width: 50%;
         height: 50%;
     }
 
-    #tituloEquipe{
+    #tituloEquipe {
         width: 48%;
         height: 48%;
         margin-left: 30%;
     }
 
-    #foto{
+    #foto {
         width: 25%;
     }
 
 
-    body{
+    body {
         display: flex;
     }
 
-    #integrantes{
+    #integrantes {
         font-size: 25pt;
-         
+
     }
 
-    .integrantes{
+    .integrantes {
         font-size: 20pt;
         text-align: start;
     }
 
-    #explicacao{
+    #explicacao {
+        font-size: 15pt;
+    }
+
+    .texto{
         font-size: 15pt;
     }
 }
