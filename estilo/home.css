@@ -51,8 +51,18 @@
   transform: translateY(1em);
 }
 
+.button1{
+    cursor: pointer;
+    border:rgb(219, 156, 188)  2px solid ; 
+    background-color: rgb(243, 182, 213) ;
+    border-radius: 100em ;
+    display: inline; 
+    box-shadow: 0 9px #bdbbbb;
+    padding: 1em;
+    margin-bottom: 2%;
+    margin-left: 86%;
+
 #btn1{
-    
     margin-left: 85%;
     justify-content: flex-end;
     margin-top: 3%;
